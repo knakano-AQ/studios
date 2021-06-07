@@ -96,26 +96,32 @@ background-color: #111;
         <div class="row" id="sec1">
           <h1 id="admin" style="text-align: center;">Account Level Form Rules</h1>
           <dl>
+
             <dt>ADMIN | Billing Type - Fee Based Billing</dt>
               <dd><span id="bIF">IF</span> Billing Type is Fee Based Billing</dd>
               <dd><span id="bID">THEN</span> Show Fields: Fee Type</dd>
-            <dt>ADMIN | Industry - Other Industry</dt>
+
+              <dt>ADMIN | Industry - Other Industry</dt>
               <dd><span id="bIF">IF</span> Industry is Other</dd>
               <dd><span id="bID">THEN</span> Show Fields: Other Industry</dd>
-            <dt>ADMIN | Taxable - Tax Type and %</dt>
+
+              <dt>ADMIN | Taxable - Tax Type and %</dt>
               <dd><span id="bIF">IF</span> Taxable is Yes</dd>
               <dd><span id="bID">THEN</span> Show Fields: Tax Type,Tax %</dd>
-            <dt>ADMIN | Hide Revenue Fields (PM)</dt>
+
+              <dt>ADMIN | Hide Revenue Fields (PM)</dt>
               <dd><span id="bIF">IF</span> User Role is Project Member</dd>
               <dd><span id="bID">THEN</span> Hide Fields: Est Revenue,Revenue</dd>
-            <dt>ADMIN | Admin Only User Fields</dt>
+
+              <dt>ADMIN | Admin Only User Fields</dt>
               <dd><span id="bIF">IF</span> User Role is Account Admin</dd>
               <dd><span id="bAN">AND</span> User is not kmyers@aquent.com</dd>
               <dd><span id="bAN">AND</span> User is not jswanson@aquent.com</dd>
               <dd><span id="bAN">AND</span> User is not cjohnson@aquent.com</dd>
               <dd><span id="bID">THEN</span> Show Fields: Staffing AD Manager, Studios Sales Representative, Staffing VP, Aquent Group (ITS/Studios/Staffing), Staffing Account Director</dd>
               <dd><span id="bAN">AND</span> Show Sections: Studios Operating Characteristics</dd>
-            <dt>ADMIN | Operating Characteristics</dt>
+
+              <dt>ADMIN | Operating Characteristics</dt>
               <dd><span id="bIF">IF</span> Project Name is ADMIN ONLY | Studios Operating Characteristics</dd>
               <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
               <dd><span id="bAN">AND</span> Set Field Value: Deliverable Type_acct: zzADMIN ONLY_NB</dd>
@@ -127,219 +133,156 @@ background-color: #111;
               <dd><span id="bAN">AND</span> Set Field Value: Est Revenue: 0</dd>
               <dd><span id="bAN">AND</span> Set Field Value: Revenue: 0<dd>
               <dd><span id="bAN">AND</span> Set Field Value: Project Status: Complete</dd>
-            <dt>ADMIN | SOC - Data Transfer</dt>
-            <dd>
+
+              <dt>ADMIN | SOC - Data Transfer</dt>
               <dd><span id="bIF">IF</span> Data Transfer is Yes</dd>
               <dd><span id="bID">THEN</span> Show Message: Please contact Aquent Legal to ensure we are doing so properly.
               <dd><span id="bDI">DISPLAY</span> Only on creation</dd>
-            </dd>
-            <dt>ADMIN | SOC - Service Providers or Contractors</dt>
-            <dd>
+
+              <dt>ADMIN | SOC - Service Providers or Contractors</dt>
               <dd><span id="bIF">IF</span> Service Providers or Contractors_1 is Yes</dd>
-              <dd><span id="bID">THEN</span> Show Fields: Service Providers or</dd>
-              Contractors_2<span id="client"></span>
-            </dd>
-            <dt>Adobe Systems, Inc.</dt>
-            <dd>
+              <dd><span id="bID">THEN</span> Show Fields: Service Providers or Contractors_2<span id="client"></span></dd>
+
+              <dt>Adobe Systems, Inc.</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | Adobe Systems, Inc.</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Adobe - Hernandez, Jeremy - 2728269
-            </dd>
-            <dt>Aetna Life Insurance Company</dt>
-            <dd>
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Adobe - Hernandez, Jeremy - 2728269</dd>
+
+              <dt>Aetna Life Insurance Company</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | Aetna Life Insurance</dd>
               <dd>Company-CT <span id="bID">THEN</span> Show Sections: Aetna</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Aetna - Fredette, Brooke - 600171946
-            </dd>
-            <dt>AIG Inc.</dt>
-            <dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Aetna - Fredette, Brooke - 600171946</dd>
+
+              <dt>AIG Inc.</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | American International</dd>
-              <dd>Group, Inc. <span id="bID">THEN</span> Set Field Value: Staffing</dd>
-              Account Director: AIG Inc. - Grannell, Blake - 2267889
-            </dd>
-            <dt>Amazon</dt>
-            <dd>
+              <dd>Group, Inc. <span id="bID">THEN</span> Set Field Value: Staffing Account Director: AIG Inc. - Grannell, Blake - 2267889</dd>
+
+              <dt>Amazon</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | Amazon</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Industry: Etail /</dd>
-              <dd>Retail <span id="bAN">AND</span> Hide Fields: Aquent Account</dd>
-              Manager,Aquent Project Manager,Client Contact
-              Email,Taxable,Tier,Project Documents,Country
-              <dd><span id="bAN">AND</span> Set Field Value: Billing Frequency:</dd>
-              <dd>Monthly <span id="bAN">AND</span> Show Sections:</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
-            </dd>
-            <dt>Anthem</dt>
-            <dd>
+              <dd><span id="bID">THEN</span> Set Field Value: Industry: Etail / Retail</dd>
+              <dd><span id="bAN">AND</span> Hide Fields: Aquent Account Manager, Aquent Project Manager, Client Contact Email, Taxable, Tier, Project Documents, Country
+              <dd><span id="bAN">AND</span> Set Field Value: Billing Frequency: Monthly
+              <dd><span id="bAN">AND</span> Show Sections:</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
+
+              <dt>Anthem</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | Anthem, Inc.</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Anthem - Gottfried, Kate - 2212101
-            </dd>
-            <dt>AON</dt>
-            <dd>
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Anthem - Gottfried, Kate - 2212101</dd>
+
+              <dt>AON</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | AON</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
-            </dd>
-            <dt>Apple Media Japan</dt>
-            <dd>
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
+
+              <dt>Apple Media Japan</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | Apple Media Japan</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
-            </dd>
-            <dt>Badge Meter</dt>
-            <dd>
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
+
+              <dt>Badge Meter</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | Badger Meter</dd>
-              <dd><span id="bID">THEN</span> Set Field Options: Staffing Account</dd>
-              Director: Unassigned
-            </dd>
-            <dt>Banner Quality Management, Inc.</dt>
-            <dd>
+              <dd><span id="bID">THEN</span> Set Field Options: Staffing Account Director: Unassigned</dd>
+
+              <dt>Banner Quality Management, Inc.</dt>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
-            </dd>
-            <dt>Barrette Outdoor Living</dt>
-            <dd>
-              <dd><span id="bIF">IF</span> Client is AQUENT | Barrette Outdoor</dd>
-              <dd>Living <span id="bID">THEN</span> Set Field Value: Staffing</dd>
-              Account Director: Unassigned
-            </dd>
-            <dt>Boeing Be Boeing</dt>
-            <dd>
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
+
+              <dt>Barrette Outdoor Living</dt>
+              <dd><span id="bIF">IF</span> Client is AQUENT | Barrette Outdoor Living</dd>
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
+
+              <dt>Boeing Be Boeing</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | Boeing Be Boeing</dd>
               <dd><span id="bID">THEN</span> Show Sections: Boeing</dd>
               <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
-              <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or</dd>
-              <dd>PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide</dd>
-              Fields: Client Contact,Client Contact Email,Client
-              <dd>Division/Department <span id="bAN">AND</span> Set Field Value:</dd>
-              Staffing Account Director: Unassigned
-              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager:</dd>
-              Margaret Clasing
-            </dd>
-            <dt>Boeing Company</dt>
-            <dd>
+              <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or PO#,214829 | RMS/Workfront Number</dd>
+              <dd><span id="bAN">AND</span> Hide Fields: Client Contact, Client Contact Email, Client Division/Department</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager: Margaret Clasing
+
+                <dt>Boeing Company</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | Boeing Company</dd>
               <dd><span id="bID">THEN</span> Show Sections: Boeing</dd>
               <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
-              <dd><span id="bAN">AND</span> Show Fields: 214829 | RMS/Workfront</dd>
-              <dd>Number,214829 | Creative Service PC <span id="bAN">AND</span> Hide</dd>
-              Fields: Client Contact,Client Contact Email,Client
-              <dd>Division/Department <span id="bAN">AND</span> Set Field Value:</dd>
-              Staffing Account Director: Unassigned
-              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager:</dd>
-              Margaret Clasing
-            </dd>
-            <dt>Boeing Contract Labor</dt>
-            <dd>
+              <dd><span id="bAN">AND</span> Show Fields: 214829 | RMS/Workfront Number,214829 | Creative Service PC</dd>
+              <dd><span id="bAN">AND</span> Hide Fields: Client Contact, Client Contact Email, Client Division/Department</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager: Margaret Clasing</dd>
+
+              <dt>Boeing Contract Labor</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | Boeing Contract Labor</dd>
               <dd><span id="bID">THEN</span> Show Sections: Boeing</dd>
-              <dd><span id="bAN">AND</span> Show Fields: Beeline Req ID,214829 |</dd>
-              <dd>Manager <span id="bAN">AND</span> Hide Fields:</dd>
-              Chargeline,PO#,214829 | Deliverable Type,Round,214829 | Client
-              Contact,214829 | BP Requester,214829 | BP Email
-              Address,Industry,Total Deliverable Quantity,Tier,Billing
-              Frequency,Taxable,Client Contact,Client Contact Email,Aquent
-              Account Manager,Aquent Project Manager,Aquent Group
-              (ITS/Studios/Staffing) ,Studios Sales Representative,Staffing AD
-              Manager,Staffing VP,214829 | Business Division,214829 |
-              <dd>Round,214829 | Rush <span id="bAN">AND</span> Set Field Value:</dd>
-              Staffing Account Director: Unassigned
-            </dd>
-            <dt>Boeing Corporate Communications</dt>
-            <dd>
-              <dd><span id="bIF">IF</span> Client is AQUENT | Boeing Corporate</dd>
-              <dd>Communications <span id="bID">THEN</span> Show Sections: Boeing</dd>
+              <dd><span id="bAN">AND</span> Show Fields: Beeline Req ID,214829 | Manager</dd>
+              <dd><span id="bAN">AND</span> Hide Fields: Chargeline,PO#,214829 | Deliverable Type, Round, 214829 | Client Contact, 214829 | BP Requester,214829 | BP Email Address,
+              Industry, Total Deliverable Quantity, Tier, Billing Frequency, Taxable, Client Contact, Client Contact Email, Aquent Account Manager, Aquent Project Manager, Aquent Group
+              (ITS/Studios/Staffing), Studios Sales Representative, Staffing AD Manager, Staffing VP, 214829 | Business Division,214829 | Round, 214829 | Rush</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
+
+              <dt>Boeing Corporate Communications</dt>
+              <dd><span id="bIF">IF</span> Client is AQUENT | Boeing Corporate Communications</dd>
+              <dd><span id="bID">THEN</span> Show Sections: Boeing</dd>
               <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
-              <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or</dd>
-              <dd>PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide</dd>
-              Fields: Client Contact,Client Contact Email,Client
-              <dd>Division/Department <span id="bAN">AND</span> Set Field Value:</dd>
-              Staffing Account Director: Unassigned
-              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager:</dd>
-              Margaret Clasing
-            </dd>
-            <dt>Boeing Employee Communications</dt>
-            <dd>
-              <dd><span id="bIF">IF</span> Client is AQUENT | Boeing Employee</dd>
-              <dd>Communications <span id="bID">THEN</span> Show Sections: Boeing</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
-              <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or</dd>
-              <dd>PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide</dd>
-              Fields: Client Contact,Client Contact Email,Client
-              <dd>Division/Department <span id="bAN">AND</span> Set Field Value:</dd>
-              Staffing Account Director: Unassigned
-              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager:</dd>
-              Margaret Clasing
-            </dd>
-            <dt>Boeing ETA Awards</dt>
-            <dd>
+              <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or PO#,214829 | RMS/Workfront Number</dd>
+              <dd><span id="bAN">AND</span> Hide Fields: Client Contact,Client Contact Email,Client Division/Department</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager: Margaret Clasing</dd>
+
+                <dt>Boeing Employee Communications</dt>
+                <dd><span id="bIF">IF</span> Client is AQUENT | Boeing Employee Communications</dd>
+                <dd><span id="bID">THEN</span> Show Sections: Boeing</dd>
+                <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
+                <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or PO#,214829 | RMS/Workfront Number</dd>
+                <dd><span id="bAN">AND</span> Hide Fields: Client Contact,Client Contact Email,Client Division/Department</dd>
+                <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
+                <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager: Margaret Clasing</dd>
+
+
+              <dt>Boeing ETA Awards</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | Boeing ETA Awards</dd>
               <dd><span id="bID">THEN</span> Show Sections: Boeing</dd>
               <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
-              <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or</dd>
-              <dd>PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide</dd>
-              Fields: Client Contact,Client Contact Email,Client
-              <dd>Division/Department <span id="bAN">AND</span> Set Field Value:</dd>
-              Staffing Account Director: Boeing - Clasing, Margaret - 1019126
-              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager:</dd>
-              Margaret Clasing
-            </dd>
-            <dt>Boeing Global Services</dt>
-            <dd>
+              <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or PO#,214829 | RMS/Workfront Number</dd>
+              <dd><span id="bAN">AND</span> Hide Fields: Client Contact,Client Contact Email,Client Division/Department</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Boeing - Clasing, Margaret - 1019126</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager: Margaret Clasing</dd>
+
+              <dt>Boeing Global Services</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | Boeing Global Services</dd>
               <dd><span id="bID">THEN</span> Show Sections: Boeing</dd>
               <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
-              <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or</dd>
-              <dd>PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide</dd>
-              Fields: Client Contact,Client Contact Email,Client
-              <dd>Division/Department <span id="bAN">AND</span> Set Field Value:</dd>
-              Staffing Account Director: Boeing - Clasing, Margaret - 1019126
-              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager:</dd>
-              Margaret Clasing
-            </dd>
-            <dt>Boeing Graphic & Creative Requests</dt>
-            <dd>
-              <dd><span id="bIF">IF</span> Client is AQUENT | Boeing Graphic &</dd>
-              <dd>Creative Requests <span id="bID">THEN</span> Show Sections: Boeing</dd>
+              <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or PO#,214829 | RMS/Workfront Number</dd>
+              <dd><span id="bAN">AND</span> Hide Fields: Client Contact,Client Contact Email,Client Division/Department</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Boeing - Clasing, Margaret - 1019126</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager: Margaret Clasing</dd>
+
+              <dt>Boeing Graphic & Creative Requests</dt>
+              <dd><span id="bIF">IF</span> Client is AQUENT | Boeing Graphic & Creative Requests</dd>
+              <dd><span id="bID">THEN</span> Show Sections: Boeing</dd>
               <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
-              <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or</dd>
-              <dd>PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide</dd>
-              Fields: Client Contact,Client Contact Email,Client
-              <dd>Division/Department <span id="bAN">AND</span> Set Field Value:</dd>
-              Staffing Account Director: Boeing - Clasing, Margaret - 1019126
-              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager:</dd>
-              Margaret Clasing
-            </dd>
+              <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or PO#,214829 | RMS/Workfront Number</dd>
+              <dd><span id="bAN">AND</span> Hide Fields: Client Contact,Client Contact Email,Client Division/Department
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Boeing - Clasing, Margaret - 1019126</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager: Margaret Clasing</dd>
+
+
             <dt>Boeing Information & Custom Signage</dt>
-            <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Boeing Information &</dd>
               <dd>Custom Signage <span id="bID">THEN</span> Show Sections: Boeing</dd>
               <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
               <dd><span id="bAN">AND</span> Show Fields: 214829 | E-Ticket Number</dd>
-              <dd><span id="bAN">AND</span> Hide Fields: Client Contact,Client</dd>
-              Contact Email,Client Division/Department
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              <dd>Director: (null) <span id="bAN">AND</span> Set Field Value: Aquent</dd>
-              Account Manager: Margaret Clasing
-            </dd>
+              <dd><span id="bAN">AND</span> Hide Fields: Client Contact, Client Contact Email, Client Division/Department</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: (null)</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager: Margaret Clasing</dd>
+
+
             <dt>Boeing International</dt>
-            <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Boeing International</dd>
               <dd><span id="bID">THEN</span> Show Sections: Boeing</dd>
               <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
-              <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or</dd>
-              <dd>PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide</dd>
-              Fields: Client Contact,Client Contact Email,Client
-              <dd>Division/Department <span id="bAN">AND</span> Set Field Value:</dd>
-              Staffing Account Director: Boeing - Clasing, Margaret - 1019126
-              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager:</dd>
-              Margaret Clasing
-            </dd>
+              <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or PO#,214829 | RMS/Workfront Number
+              <dd><span id="bAN">AND</span> Hide Fields: Client Contact, Client Contact Email, Client Division/Department
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Boeing - Clasing, Margaret - 1019126
+              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager: Margaret Clasing</dd>
+
+
             <dt>Boeing MAPS</dt>
-            <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Boeing MAPS</dd>
               <dd><span id="bID">THEN</span> Show Sections: Boeing</dd>
               <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
@@ -348,37 +291,29 @@ background-color: #111;
               Fields: Client Contact,Client Contact Email,Client
               <dd>Division/Department <span id="bAN">AND</span> Set Field Value:</dd>
               Staffing Account Director: Boeing - Clasing, Margaret - 1019126
-              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager:</dd>
-              Margaret Clasing
-            </dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager: Margaret Clasing</dd>
+
+
             <dt>Boeing Photo Services and Support</dt>
-            <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Boeing Photo Services</dd>
               <dd>and Support <span id="bID">THEN</span> Show Sections: Boeing</dd>
               <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
-              <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or</dd>
-              PO#,214829 | RMS/Workfront Number,Location
-              <dd><span id="bAN">AND</span> Hide Fields: Client Contact,Client</dd>
-              Contact Email,Client Division/Department
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Boeing - Clasing, Margaret - 1019126
-              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager:</dd>
-              Margaret Clasing
-            </dd>
+              <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or PO#,214829 | RMS/Workfront Number,Location</dd>
+              <dd><span id="bAN">AND</span> Hide Fields: Client Contact,Client Contact Email,Client Division/Department</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Boeing - Clasing, Margaret - 1019126</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager: Margaret Clasing</dd>
+
+
             <dt>Boeing Recycling Program</dt>
-            <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
               <dd><span id="bID">THEN</span> Show Sections: Boeing</dd>
               <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
-              <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or</dd>
-              <dd>PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide</dd>
-              Fields: Client Contact,Client Contact Email,Client
-              <dd>Division/Department <span id="bAN">AND</span> Set Field Value:</dd>
-              <dd>Staffing Account Director: (null) <span id="bAN">AND</span> Set</dd>
-              Field Value: Aquent Account Manager: Margaret Clasing
-            </dd>
+              <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or PO#,214829 | RMS/Workfront Number</dd>
+              <dd><span id="bAN">AND</span> Hide Fields: Client Contact, Client Contact Email, Client Division/Department</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: (null)</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager: Margaret Clasing</dd>
+
             <dt>Boeing Stores</dt>
-            <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Boeing Stores</dd>
               <dd><span id="bID">THEN</span> Show Sections: Boeing</dd>
               <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
@@ -387,46 +322,40 @@ background-color: #111;
               Fields: Client Contact,Client Contact Email,Client
               <dd>Division/Department <span id="bAN">AND</span> Set Field Value:</dd>
               Staffing Account Director: Boeing - Clasing, Margaret - 1019126
-              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager:</dd>
-              Margaret Clasing
-            </dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager: Margaret Clasing</dd>
+
+
             <dt>Canon Design Group</dt>
-            <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Canon Design Group</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Canon - Geron, April - 2603193
-            </dd>
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Canon - Geron, April - 2603193</dd>
+
+
             <dt>Casper Sleep, Inc.</dt>
-            <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Casper Sleep, Inc.</dd>
-              <dd><span id="bID">THEN</span> Set Field Options: Staffing Account</dd>
-              Director: Casper - DeLorenzo, Frank - 2868252( 247922)
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Casper - DeLorenzo, Frank - 2868252
-            </dd>
+              <dd><span id="bID">THEN</span> Set Field Options: Staffing Account Director: Casper - DeLorenzo, Frank - 2868252( 247922)</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Casper - DeLorenzo, Frank - 2868252</dd>
+
+
             <dt>Charles Scwab</dt>
-            <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Charles Schwab</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
-            </dd>
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
+
+
             <dt>Clearwater Analytics</dt>
-            <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Clearwater Analytics</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
-            </dd>
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
+
+
             <dt>COBRA</dt>
-            <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | COBRA</dd>
               <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
               <dd>Director: Unassigned <span id="bAN">AND</span> Set Field Value:</dd>
               <dd>Deliverable Type_acct: Confidential <span id="bAN">AND</span> Set</dd>
               Field Value: Deliverable Subtype_acct: Confidential
               <dd><span id="bAN">AND</span> Set Field Value:</dd>
-            </dd>
+
+
             <dt>Colgate Palmolive</dt>
-            <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Colgate Palmolive</dd>
               <dd><span id="bID">THEN</span> Show Sections: Colgate</dd>
               <dd><span id="bAN">AND</span> Set Field Value: Industry: Household</dd>
@@ -435,21 +364,20 @@ background-color: #111;
               Manager,Client Division/Department,Total Deliverable
               <dd>Quantity,Project Documents <span id="bAN">AND</span> Set Field</dd>
               Value: Staffing Account Director: Unassigned
-            </dd>
+
+
             <dt>Constellis, LLC</dt>
-            <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Constellis, LLC</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
-            </dd>
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
+
+
             <dt>CVS Health Corporation</dt>
-            <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | CVS Health Corporation</dd>
               <dd><span id="bID">THEN</span> Show Sections: CVS</dd>
               <dd><span id="bAN">AND</span> Hide Fields: Client Division/Department</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: CVS - Fredette, Brooke - 600171946
-            </dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: CVS - Fredette, Brooke - 600171946</dd>
+
+
             <dt>CVS - non-POG</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | CVS Health Corporation</dd>
@@ -457,6 +385,7 @@ background-color: #111;
               <dd><span id="bID">THEN</span> Show Fields: 211688 | Total</dd>
               Deviations,211688 | Deliverable Types,211688 | Total Deviations
             </dd>
+
             <dt>CVS - Planogram</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | CVS Health Corporation</dd>
@@ -464,6 +393,7 @@ background-color: #111;
               <dd><span id="bID">THEN</span> Show Fields: 211688 | Deliverable</dd>
               Types,211688 | Total Deviations,211688 | Total Deviations
             </dd>
+
             <dt>Dealer.com</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
@@ -471,30 +401,32 @@ background-color: #111;
               <dd>(ITS/Studios/Staffing): A500 <span id="bAN">AND</span> Set Field</dd>
               Value: Staffing Account Director: Unassigned
             </dd>
+
             <dt>Dell</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Dell</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Department of Treasury/IRS</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Department of the</dd>
               <dd>Treasury/IRS <span id="bID">THEN</span> Set Field Value: Staffing</dd>
               Account Director: Unassigned
             </dd>
+
             <dt>Dev6 | Morgan Stanley</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Morgan Stanley</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: (null)
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: (null)</dd>
             </dd>
+
             <dt>DXC Technology</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | DXC Technology</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>DXC Technology (Managed Services)</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | DXC Technology</dd>
@@ -503,12 +435,13 @@ background-color: #111;
               <dd><span id="bAN">AND</span> Set Field Value: Aquent Group</dd>
               (ITS/Studios/Staffing): Managed Services
             </dd>
+
             <dt>Expedia Inc.</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Expedia Inc.</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Exxon Mobil Corporation - No Tax</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | ExxonMobil Corporation</dd>
@@ -516,9 +449,9 @@ background-color: #111;
               <dd>Energy <span id="bAN">AND</span> Hide Fields: Client</dd>
               Division/Department,ClContact Email,Client Contact
               <dd><span id="bAN">AND</span> Show Sections: Exxon</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: ExxonMobil - Feldman, Matthew - 1480182
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: ExxonMobil - Feldman, Matthew - 1480182</dd>
             </dd>
+
             <dt>Exxon Mobil Corporation - Tax</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | ExxonMobil Corporation</dd>
@@ -529,78 +462,81 @@ background-color: #111;
               <dd><span id="bAN">AND</span> Set Field Value: Tax Type: Tax based on</dd>
               <dd>role of person doing work <span id="bAN">AND</span> Set Field</dd>
               <dd>Value: Tax %: 8.25 <span id="bAN">AND</span> Show Sections: Exxon</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: ExxonMobil - Feldman, Matthew - 1480182
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: ExxonMobil - Feldman, Matthew - 1480182</dd>
             </dd>
+
             <dt>Fidelity Investments</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Fieldglass@HP (Managed Staffing)</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | zzz[03/07/2022]</dd>
               <dd>Fieldglass@HP (Managed Services) <span id="bID">THEN</span> Set</dd>
               Field Value: Staffing Account Director: Unassigned
             </dd>
+
             <dt>Frontier Communications Corporation</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>General Motors (ITS)</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | zzz[12/31/2021]</dd>
               <dd>General Motors (ITS) <span id="bID">THEN</span> Set Field Options:</dd>
               Staffing Account Director: GM - McClain, Randy - 1268312( 247922)
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Glenmark Specialty S.A.</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Glenmark Specialty</dd>
-              <dd>S.A. <span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd>S.A. <span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Goodwin</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
               <dd><span id="bID">THEN</span> Show Sections: ()</dd>
             </dd>
+
             <dt>Goldman Sachs Bank USA</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>GRAIL, Inc.</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | zzz[02/21/2022] GRAIL,</dd>
               <dd>Inc. <span id="bID">THEN</span> Set Field Options: Staffing</dd>
               Account Director: GRAIL - Poulos, Kathleen - 2854096( 247922)
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: GRAIL - Poulos, Kathleen - 2854096
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: GRAIL - Poulos, Kathleen - 2854096</dd>
             </dd>
+
             <dt>Groupon, Inc.</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Groupon, Inc.</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Groupon - Brown, Jordan - 2272502
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Groupon - Brown, Jordan - 2272502</dd>
             </dd>
+
             <dt>GS Global Resources</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Hewlett Packard Enterprise</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Hewlett Packard</dd>
               <dd>Enterprise <span id="bID">THEN</span> Set Field Value: Staffing</dd>
               Account Director: Unassigned
             </dd>
+
             <dt>Hewlett Packard Enterprise (Managed Services)</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Hewlett Packard</dd>
@@ -613,6 +549,7 @@ background-color: #111;
               <dd>73821(73821) <span id="bAN">AND</span> Set Field Value: Staffing</dd>
               Account Director: HPMS - Martin, Kimberly - 358596
             </dd>
+
             <dt>HP Inc. (Managed Services)</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | HP Inc. (Managed</dd>
@@ -624,39 +561,40 @@ background-color: #111;
               <dd>73821(73821) <span id="bAN">AND</span> Set Field Value: Staffing</dd>
               Account Director: HPMS - Martin, Kimberly - 358596
             </dd>
+
             <dt>Hines Interests Limited Partnerships</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>HMR Weight Management Services Corp</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
               <dd><span id="bID">THEN</span> Show Sections: HMR</dd>
               <dd><span id="bAN">AND</span> Hide Fields: Tier,Client Contact,Client</dd>
               <dd>Contact Email <span id="bAN">AND</span> Set Field Value: Revenue:</dd>
-              <dd>0 <span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd>0 <span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>HP Inc.</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | HP Inc.</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>HPI CDD</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | HPI CDD</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>HPI KM</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | HPI KM</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Humana Inc.</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Humana Inc.</dd>
@@ -665,46 +603,46 @@ background-color: #111;
               <dd>Humana <span id="bAN">AND</span> Show Fields: 216962 |</dd>
               Program,216962 | Category
             </dd>
+
             <dt>ICMA-RC</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | ICMA-RC</dd>
-              <dd><span id="bID">THEN</span> Set Field Options: Staffing Account</dd>
-              Director: ICMA- RC - Moore, Sarah Tyler - 2658703( 247922)
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: ICMA-RC - Moore, Sarah Tyler - 2658703
+              <dd><span id="bID">THEN</span> Set Field Options: Staffing Account Director: ICMA- RC - Moore, Sarah Tyler - 2658703( 247922)</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: ICMA-RC - Moore, Sarah Tyler - 2658703</dd>
             </dd>
+
             <dt>Intellectual Property Owners Association</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Intellectual Property</dd>
               <dd>Owners Association <span id="bID">THEN</span> Show Sections:</dd>
               Intellectual Property Owners Association
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Johnson & Johnson</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Johnson & Johnson</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>JP Morgan Chase Bank, National Association</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Kaiser Permanente</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Kaiser Permanente</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Kaiser Permanente - Poulos, Kathleen - 2854096
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Kaiser Permanente - Poulos, Kathleen - 2854096</dd>
             </dd>
+
             <dt>Kelly Services @ Deer (ITS)</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Kelly Services @ Deere</dd>
-              <dd>(ITS) <span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd>(ITS) <span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Lockheed Martin Corporation</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Lockheed Martin</dd>
@@ -713,6 +651,7 @@ background-color: #111;
               Staffing Account Director: Lockheed Martin - Thurman, Ray -
               1663208
             </dd>
+
             <dt>LPL Financial</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | LPL Financial LLC</dd>
@@ -724,6 +663,7 @@ background-color: #111;
               <dd>Monthly <span id="bAN">AND</span> Set Field Value: Staffing</dd>
               Account Director: Unassigned
             </dd>
+
             <dt>Liberty Mutual Insurance Company</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Liberty Mutual</dd>
@@ -733,36 +673,39 @@ background-color: #111;
               Staffing Account Director: Liberty Mutual - Doherty, William -
               2798895
             </dd>
+
             <dt>Marriott International Global Digital</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Marriott International</dd>
               <dd>Global Digital <span id="bID">THEN</span> Set Field Value:</dd>
               Staffing Account Director: Unassigned
             </dd>
+
             <dt>Marriott International MDS</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Marriott International</dd>
-              <dd>MDS <span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd>MDS <span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Marriott International MDS OT</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | zzz[09/06/2021]</dd>
               <dd>Marriott International MDS OT <span id="bID">THEN</span> Set Field</dd>
               Value: Staffing Account Director: Unassigned
             </dd>
+
             <dt>Merck & Company, Inc.</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Merck & Company, Inc.</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>MetLife Inc.</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | MetLife Inc.</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>MetLife</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | MetLife Inc.</dd>
@@ -770,24 +713,27 @@ background-color: #111;
               <dd><span id="bAN">AND</span> Set Field Value: Industry: Financial:</dd>
               Insurance
             </dd>
+
             <dt>Micro Focus (Managed Staffing)</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Micro Focus (Managed</dd>
               <dd>Services) <span id="bID">THEN</span> Set Field Value: Staffing</dd>
               Account Director: Unassigned
             </dd>
+
             <dt>Mozilla</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Mozilla</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>McDonald's Corporation</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | McDonald&amp;apos;s</dd>
               <dd>Corporation <span id="bID">THEN</span> Set Field Value: Staffing</dd>
               Account Director: Unassigned
             </dd>
+
             <dt>Microfocus (Managed Services)</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Micro Focus (Managed</dd>
@@ -801,6 +747,7 @@ background-color: #111;
               <dd>Account Director: Unassigned <span id="bAN">AND</span> Set Field</dd>
               Value: Staffing Account Director: Unassigned
             </dd>
+
             <dt>Microsoft Canada Studios</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Microsoft Canada</dd>
@@ -809,18 +756,20 @@ background-color: #111;
               <dd>Director: Unassigned <span id="bAN">AND</span> Set Field Value:</dd>
               Billing Type: Fee Based Billing(107)
             </dd>
+
             <dt>Microsoft Cloud + AI Fee</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Microsoft Cloud + AI</dd>
               <dd>Fee <span id="bID">THEN</span> Show Sections: Microsoft</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Microsoft Cloud + AI T&amp;M</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
               <dd><span id="bID">THEN</span> Show Sections: Microsoft</dd>
             </dd>
+
             <dt>Microsoft DevRelations C+L Managed Service</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Microsoft DevRelations</dd>
@@ -828,25 +777,27 @@ background-color: #111;
               <dd>Microsoft <span id="bAN">AND</span> Set Field Value: Staffing</dd>
               Account Director: Unassigned
             </dd>
+
             <dt>Microsoft Exp+D Content</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Microsoft Exp+D</dd>
               <dd>Content <span id="bID">THEN</span> Show Sections: Microsoft</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Microsoft Gaming</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Microsoft Gaming</dd>
               <dd><span id="bID">THEN</span> Show Sections: Microsoft</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Microsoft Marketing & Consumer Business Management</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Microsoft Gaming</dd>
               <dd><span id="bID">THEN</span> Show Sections: Microsoft</dd>
             </dd>
+
             <dt>Microsoft ML&amp;D Creative Studio</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Microsoft ML&amp;D</dd>
@@ -854,109 +805,110 @@ background-color: #111;
               <dd>Microsoft <span id="bAN">AND</span> Set Field Value: Staffing</dd>
               Account Director: Unass
             </dd>
+
             <dt>Microsoft MSN</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | zzz[07/05/2021]</dd>
               <dd>Microsoft MSN <span id="bID">THEN</span> Show Sections: Microsoft</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Microsoft Turn 10</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Microsoft Turn 10</dd>
               <dd><span id="bID">THEN</span> Show Sections: Microsoft</dd>
             </dd>
+
             <dt>Microsoft WCB</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Microsoft WCB</dd>
               <dd><span id="bID">THEN</span> Show Sections: Microsoft</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Mphasis @ HP Inc.</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Mphasis @ HP Inc.</dd>
-              <dd><span id="bID">THEN</span> Set Field Options: Staffing Account</dd>
-              Director: Mphasis - Martin, Kimberly - 358596( 247922)
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Mphasis - Martin, Kimberly - 358596
+              <dd><span id="bID">THEN</span> Set Field Options: Staffing Account Director: Mphasis - Martin, Kimberly - 358596( 247922)</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Mphasis - Martin, Kimberly - 358596</dd>
             </dd>
+
             <dt>National Renewable Energy Lab</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Nike, Inc.</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>ODVA Inc.</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | ODVA Inc.</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Oracle Corporation</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Oracle Corporation</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Pandora Media</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Pandora Media, LLC</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Pandora - Salazar, Melissa - 2451572
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Pandora - Salazar, Melissa - 2451572</dd>
             </dd>
+
             <dt>PBF Energy</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | PBF Energy</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Peace Corps</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Peace Corps</dd>
-              <dd><span id="bID">THEN</span> Set Field Options: Staffing Account</dd>
-              Director: Peace Corps - Ray Thurman - 1663208,Unassigned( 263245)
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Peace Corps - Ray Thurman - 1663208
+              <dd><span id="bID">THEN</span> Set Field Options: Staffing Account Director: Peace Corps - Ray Thurman - 1663208,Unassigned( 263245)</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Peace Corps - Ray Thurman - 1663208</dd>
             </dd>
+
             <dt>Pekin Insurance Company (ITS)</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Pekin Insurance</dd>
               <dd>Company (ITS) <span id="bID">THEN</span> Set Field Value: Staffing</dd>
               Account Director: Unassigned
             </dd>
+
             <dt>Pennzoil-Quaker State Company</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Pennzoil-Quaker State</dd>
               <dd>Company <span id="bID">THEN</span> Set Field Options: Staffing</dd>
               Account Director: Pennzoil - Huynh, Leila - 2848643( 247922)
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Pennzoil - Huynh, Leila - 2848643
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Pennzoil - Huynh, Leila - 2848643</dd>
             </dd>
+
             <dt>Pitney Bowes Inc.</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Rakuten USA, Inc.</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Rakuten USA, Inc.</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Raytheon Company</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Raytheon Company</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Rockwell Automation - No Tax</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Rockwell Automation</dd>
@@ -965,9 +917,9 @@ background-color: #111;
               <dd><span id="bAN">AND</span> Hide Fields: Client Contact,Client</dd>
               Contact Email,Client Division/Department
               <dd><span id="bAN">AND</span> Show Fields: Actual Final Delivery Date</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Rockwell Automation - Tax</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Rockwell Automation</dd>
@@ -982,14 +934,14 @@ background-color: #111;
               <dd>Contact,Client Division/Department <span id="bAN">AND</span> Set</dd>
               Field Value: Staffing Account Director: Unassigned
             </dd>
+
             <dt>Salesforce.com</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Salesforce.com</dd>
-              <dd><span id="bID">THEN</span> Set Field Options: Staffing Account</dd>
-              Director: Salesforce - Cox, Caroline - 2855226( 247922)
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Options: Staffing Account Director: Salesforce - Cox, Caroline - 2855226( 247922)</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Sephora</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | zzz[11/01/2021]</dd>
@@ -997,63 +949,64 @@ background-color: #111;
               <dd>Etail / Retail <span id="bAN">AND</span> Set Field Value: Staffing</dd>
               Account Director: Sephora - Howard, Kimberly - 1970029
             </dd>
+
             <dt>Shutterfly BorrowLenses</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Shutterfly Inc.</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Shutterfly Inc.</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Solo</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Synchrony Financial</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Synchrony Financial</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Texas Instruments Incorporated</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Texas Instruments - Tiefenthaler, Jessica - 2511455
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Texas Instruments - Tiefenthaler, Jessica - 2511455</dd>
             </dd>
+
             <dt>Thurgood Marshall College Fund</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Tradesmen International</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Tradesmen</dd>
               <dd>International <span id="bID">THEN</span> Set Field Value: Staffing</dd>
               Account Director: Unassigned
             </dd>
+
             <dt>VMware</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | VMware</dd>
               <dd><span id="bID">THEN</span> Show Sections: VMware</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Walmart, Inc.</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | Walmart Inc.</dd>
-              <dd><span id="bID">THEN</span> Set Field Options: Staffing Account</dd>
-              Director: Walmart - Stevenson, Sam - 2487746( 247922)
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Walmart - Stevenson, Sam - 2487746
+              <dd><span id="bID">THEN</span> Set Field Options: Staffing Account Director: Walmart - Stevenson, Sam - 2487746( 247922)</dd>
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Walmart - Stevenson, Sam - 2487746</dd>
             </dd>
+
             <dt>Westfield Corporate Marketing</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT |</dd>
@@ -1062,24 +1015,24 @@ background-color: #111;
               <dd><span id="bAN">AND</span> Set Field Value: Industry: Etail /</dd>
               <dd>Retail <span id="bAN">AND</span> Hide Fields: Client</dd>
               <dd>Division/Department <span id="bAN">AND</span> Show Sections: URW</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Westfield Other Divisions</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT |</dd>
               Unibail-Rodamco-Westfield Other Divisions
               <dd><span id="bID">THEN</span> Show Sections: URW</dd>
               <dd><span id="bAN">AND</span> Show Fields: 213712 | Deliverable</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account</dd>
-              Director: Unassigned
+              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
             </dd>
+
             <dt>Dev6 | Audi of America</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account</dd>
-              Director: (null)<span id="deliverables"></span>
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: (null)<span id="deliverables"></span></dd>
             </dd>
+
             <dt>Deliverable Type | Admin Confidential</dt>
             <dd>
               <dd><span id="bIF">IF</span> Deliverable Type_acct is Confidential</dd>
@@ -1090,6 +1043,7 @@ background-color: #111;
               StudiosAdmins@aquent.com should you have any questions. DISPLAY:
               Every time the form is modified
             </dd>
+
             <dt>Deliverable Type | Options</dt>
             <dd>
               <dd><span id="bIF">IF</span> User Role is not Account Admin</dd>
@@ -1099,6 +1053,7 @@ background-color: #111;
               230230),Photography( 230231),Presentation( 230232),Print(
               230233),Video( 260746)
             </dd>
+
             <dt>Deliverable Subtype | Content (voice)</dt>
             <dd>
               <dd><span id="bIF">IF</span> Deliverable Type_acct is Content (voice)</dd>
@@ -1107,6 +1062,7 @@ background-color: #111;
               259961),Proposal Writing( 259964),Social Media( 259965),Speech
               Writing( 259966),Technical Writing( 259969)
             </dd>
+
             <dt>Deliverable Subtype | Digital</dt>
             <dd>
               <dd><span id="bIF">IF</span> Deliverable Type_acct is Digital</dd>
@@ -1120,6 +1076,7 @@ background-color: #111;
               Banner( 259967),Static Digital Panel( 259968),User Experience /
               Engagement( 259970),Virtual Reality( 259971),Website( 259972)
             </dd>
+
             <dt>Deliverable Subtype | Digital (DEV only)</dt>
             <dd>
               <dd><span id="bIF">IF</span> Deliverable Type_acct is Digital (DEV</dd>
@@ -1132,6 +1089,7 @@ background-color: #111;
               259962),Social Media( 259965),User Experience / Engagement(
               259970),Virtual Reality( 259971),Website( 259972)
             </dd>
+
             <dt>Deliverable Subtype | Digital (FED only)</dt>
             <dd>
               <dd><span id="bIF">IF</span> Deliverable Type_acct is Digital (FED</dd>
@@ -1144,6 +1102,7 @@ background-color: #111;
               259962),Social Media( 259965),User Experience / Engagement(
               259970),Virtual Reality( 259971),Website( 259972)
             </dd>
+
             <dt>Deliverable Subtype | Marketing</dt>
             <dd>
               <dd><span id="bIF">IF</span> Deliverable Type_acct is Marketing</dd>
@@ -1155,6 +1114,7 @@ background-color: #111;
               Coordination( 260014),Product Management( 260023),Training(
               260027)
             </dd>
+
             <dt>Deliverable Subtype | Managed Services</dt>
             <dd>
               <dd><span id="bIF">IF</span> Deliverable Type_acct is Managed Services</dd>
@@ -1187,6 +1147,7 @@ background-color: #111;
               Software Quality Assurance Analyst or Tester( 260789),TECH - User
               Researcher( 260790)
             </dd>
+
             <dt>Deliverable Subtype | Photography</dt>
             <dd>
               <dd><span id="bIF">IF</span> Deliverable Type_acct is Photography</dd>
@@ -1194,12 +1155,14 @@ background-color: #111;
               Subtype_acct: Event,Location( 260012),Portrait / Passport(
               260018),Product( 260022),Retouching( 260024)
             </dd>
+
             <dt>Deliverable Subtype | Presentation</dt>
             <dd>
               <dd><span id="bIF">IF</span> Deliverable Type_acct is Presentation</dd>
               <dd><span id="bID">THEN</span> Set Field Options: Deliverable</dd>
               Subtype_acct: Acrobat,Keynote( 260011),Powerpoint( 260020)
             </dd>
+
             <dt>Deliverable Subtype | Print</dt>
             <dd>
               <dd><span id="bIF">IF</span> Deliverable Type_acct is Print</dd>
@@ -1210,6 +1173,7 @@ background-color: #111;
               260010),Packaging( 260016),Poster( 260019),Premium / Swag(
               260021),Signage( 260025),Template / Self-service( 260026)
             </dd>
+
             <dt>Deliverable Subtype | Video</dt>
             <dd>
               <dd><span id="bIF">IF</span> Deliverable Type_acct is Video</dd>
@@ -1218,6 +1182,7 @@ background-color: #111;
               260015),Podcast( 260017),Video Production / Editing(
               260028),Videography( 260029),Webcast( 260030)
             </dd>
+
             <dt>Deliverable Subtype | zzADMIN ONLY_NB</dt>
             <dd>
               <dd><span id="bIF">IF</span> Deliverable Type_acct is zzADMIN ONLY_NB</dd>
@@ -1225,6 +1190,7 @@ background-color: #111;
               <dd>Subtype_acct: zzADMIN ONLY_NB <span id="bAN">AND</span> Set Field</dd>
               Value: Deliverable Subtype_acct: zzADMIN ONLY_NB
             </dd>
+
             <dt>TEST Client</dt>
             <dd>
               <dd><span id="bIF">IF</span> Client is AQUENT | zzzTest Client</dd>
