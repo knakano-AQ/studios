@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+* {
+  box-sizing: border-box;
+  background-color: #1e1e1e;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+.col {
+  padding: 5rem;
+  z-index: 1;
+}
+
+dt {
+  color: #d6d6d6;
+  text-decoration: underline;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-top: 2rem;
+  padding-bottom: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+}
+dd {
+  color: #858585;
+  line-height: 2;
+  letter-spacing: 1px;
+  font-size: smaller;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  }
+
+li {
+  float: left;
+  }
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover:not(.active) {
+background-color: #111;
+}
+
+#bIF {
+  font-weight: bolder;
+  color: #ff9900;
+}
+#bID {
+  font-weight: bold;
+  color: #ff9900;
+}
+#bAN {
+  font-weight: bold;
+  color: #ff9900;
+}
+    </style>
+    <title>RoboHead Project Form Rules - Account Level</title>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#admin">ADMIN Rules</a></li>
+      <li><a href="#client">Client Specific</a></li>
+      <li><a href="#deliverables">Deliverable Specific</a></li>
+    </ul>
+    <div class="container">
+      <div class="col">
+        <div class="row" id="sec1">
+          <h1 id="admin" style="text-align: center;">Account Level Form Rules</h1>
+          <dl>
+            <dt>ADMIN | Billing Type - Fee Based Billing</dt>
+            <dd>
+              <span id="bIF">IF</span> Billing Type is Fee Based Billing
+              <span id="bID">THEN</span> Show Fields: Fee Type
+            </dd>
+            <dt>ADMIN | Industry - Other Industry</dt>
+            <dd>
+              <span id="bIF">IF</span> Industry is Other
+              <span id="bID">THEN</span> Show Fields: Other Industry
+            </dd>
+            <dt>ADMIN | Taxable - Tax Type and %</dt>
+            <dd>
+              <span id="bIF">IF</span> Taxable is Yes
+              <span id="bID">THEN</span> Show Fields: Tax Type,Tax %
+            </dd>
+            <dt>ADMIN | Hide Revenue Fields (PM)</dt>
+            <dd>
+              <span id="bIF">IF</span> User Role is Project Member
+              <span id="bID">THEN</span> Hide Fields: Est Revenue,Revenue
+            </dd>
+            <dt>ADMIN | Admin Only User Fields</dt>
+            <dd>
+              <span id="bIF">IF</span> User Role is Account Admin
+              <span id="bAN">AND</span> User is not kmyers@aquent.com
+              <span id="bAN">AND</span> User is not jswanson@aquent.com
+              <span id="bAN">AND</span> User is not cjohnson@aquent.com
+              <span id="bID">THEN</span> Show Fields: Staffing AD
+              Manager,Studios Sales Representative,Staffing VP,Aquent Group
+              (ITS/Studios/Staffing),Staffing Account Director
+              <span id="bAN">AND</span> Show Sections: Studios Operating
+              Characteristics
+            </dd>
+            <dt>ADMIN | Operating Characteristics</dt>
+            <dd>
+              <span id="bIF">IF</span> Project Name is ADMIN ONLY | Studios
+              Operating Characteristics <span id="bID">THEN</span> Set Field
+              Value: Staffing Account Director: Unassigned
+              <span id="bAN">AND</span> Set Field Value: Deliverable Type_acct:
+              zzADMIN ONLY_NB <span id="bAN">AND</span> Set Field Value: Total
+              Deliverable Quantity: 0 <span id="bAN">AND</span> Set Field Value:
+              Billing Type: Time & Materials(106) <span id="bAN">AND</span> Set
+              Field Value: Fee Type: Project Deliverable
+              <span id="bAN">AND</span> Set Field Value: Billing Status: Do Not
+              Invoice(108) <span id="bAN">AND</span> Set Field Value: Project
+              Time Approver: 75970(75970) <span id="bAN">AND</span> Set Field
+              Value: Est Revenue: 0 <span id="bAN">AND</span> Set Field Value:
+              Revenue: 0 <span id="bAN">AND</span> Set Field Value: Project
+              Status: Complete
+            </dd>
+            <dt>ADMIN | SOC - Data Transfer</dt>
+            <dd>
+              <span id="bIF">IF</span> Data Transfer is Yes
+              <span id="bID">THEN</span> Show Message: Please contact Aquent
+              Legal to ensure we are doing so properly. DISPLAY: Only on
+              creation
+            </dd>
+            <dt>ADMIN | SOC - Service Providers or Contractors</dt>
+            <dd>
+              <span id="bIF">IF</span> Service Providers or Contractors_1 is Yes
+              <span id="bID">THEN</span> Show Fields: Service Providers or
+              Contractors_2<span id="client"></span>
+            </dd>
+            <dt>Adobe Systems, Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Adobe Systems, Inc.
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Adobe - Hernandez, Jeremy - 2728269
+            </dd>
+            <dt>Aetna Life Insurance Company</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Aetna Life Insurance
+              Company-CT <span id="bID">THEN</span> Show Sections: Aetna
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Aetna - Fredette, Brooke - 600171946
+            </dd>
+            <dt>AIG Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | American International
+              Group, Inc. <span id="bID">THEN</span> Set Field Value: Staffing
+              Account Director: AIG Inc. - Grannell, Blake - 2267889
+            </dd>
+            <dt>Amazon</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Amazon
+              <span id="bID">THEN</span> Set Field Value: Industry: Etail /
+              Retail <span id="bAN">AND</span> Hide Fields: Aquent Account
+              Manager,Aquent Project Manager,Client Contact
+              Email,Taxable,Tier,Project Documents,Country
+              <span id="bAN">AND</span> Set Field Value: Billing Frequency:
+              Monthly <span id="bAN">AND</span> Show Sections:
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Anthem</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Anthem, Inc.
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Anthem - Gottfried, Kate - 2212101
+            </dd>
+            <dt>AON</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | AON
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Apple Media Japan</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Apple Media Japan
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Badge Meter</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Badger Meter
+              <span id="bID">THEN</span> Set Field Options: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Banner Quality Management, Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Barrette Outdoor Living</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Barrette Outdoor
+              Living <span id="bID">THEN</span> Set Field Value: Staffing
+              Account Director: Unassigned
+            </dd>
+            <dt>Boeing Be Boeing</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Boeing Be Boeing
+              <span id="bID">THEN</span> Show Sections: Boeing
+              <span id="bAN">AND</span> Set Field Value: Industry: Manufacturing
+              <span id="bAN">AND</span> Show Fields: 214829 | Chargeline or
+              PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide
+              Fields: Client Contact,Client Contact Email,Client
+              Division/Department <span id="bAN">AND</span> Set Field Value:
+              Staffing Account Director: Unassigned
+              <span id="bAN">AND</span> Set Field Value: Aquent Account Manager:
+              Margaret Clasing
+            </dd>
+            <dt>Boeing Company</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Boeing Company
+              <span id="bID">THEN</span> Show Sections: Boeing
+              <span id="bAN">AND</span> Set Field Value: Industry: Manufacturing
+              <span id="bAN">AND</span> Show Fields: 214829 | RMS/Workfront
+              Number,214829 | Creative Service PC <span id="bAN">AND</span> Hide
+              Fields: Client Contact,Client Contact Email,Client
+              Division/Department <span id="bAN">AND</span> Set Field Value:
+              Staffing Account Director: Unassigned
+              <span id="bAN">AND</span> Set Field Value: Aquent Account Manager:
+              Margaret Clasing
+            </dd>
+            <dt>Boeing Contract Labor</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Boeing Contract Labor
+              <span id="bID">THEN</span> Show Sections: Boeing
+              <span id="bAN">AND</span> Show Fields: Beeline Req ID,214829 |
+              Manager <span id="bAN">AND</span> Hide Fields:
+              Chargeline,PO#,214829 | Deliverable Type,Round,214829 | Client
+              Contact,214829 | BP Requester,214829 | BP Email
+              Address,Industry,Total Deliverable Quantity,Tier,Billing
+              Frequency,Taxable,Client Contact,Client Contact Email,Aquent
+              Account Manager,Aquent Project Manager,Aquent Group
+              (ITS/Studios/Staffing) ,Studios Sales Representative,Staffing AD
+              Manager,Staffing VP,214829 | Business Division,214829 |
+              Round,214829 | Rush <span id="bAN">AND</span> Set Field Value:
+              Staffing Account Director: Unassigned
+            </dd>
+            <dt>Boeing Corporate Communications</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Boeing Corporate
+              Communications <span id="bID">THEN</span> Show Sections: Boeing
+              <span id="bAN">AND</span> Set Field Value: Industry: Manufacturing
+              <span id="bAN">AND</span> Show Fields: 214829 | Chargeline or
+              PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide
+              Fields: Client Contact,Client Contact Email,Client
+              Division/Department <span id="bAN">AND</span> Set Field Value:
+              Staffing Account Director: Unassigned
+              <span id="bAN">AND</span> Set Field Value: Aquent Account Manager:
+              Margaret Clasing
+            </dd>
+            <dt>Boeing Employee Communications</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Boeing Employee
+              Communications <span id="bID">THEN</span> Show Sections: Boeing
+              <span id="bAN">AND</span> Set Field Value: Industry: Manufacturing
+              <span id="bAN">AND</span> Show Fields: 214829 | Chargeline or
+              PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide
+              Fields: Client Contact,Client Contact Email,Client
+              Division/Department <span id="bAN">AND</span> Set Field Value:
+              Staffing Account Director: Unassigned
+              <span id="bAN">AND</span> Set Field Value: Aquent Account Manager:
+              Margaret Clasing
+            </dd>
+            <dt>Boeing ETA Awards</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Boeing ETA Awards
+              <span id="bID">THEN</span> Show Sections: Boeing
+              <span id="bAN">AND</span> Set Field Value: Industry: Manufacturing
+              <span id="bAN">AND</span> Show Fields: 214829 | Chargeline or
+              PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide
+              Fields: Client Contact,Client Contact Email,Client
+              Division/Department <span id="bAN">AND</span> Set Field Value:
+              Staffing Account Director: Boeing - Clasing, Margaret - 1019126
+              <span id="bAN">AND</span> Set Field Value: Aquent Account Manager:
+              Margaret Clasing
+            </dd>
+            <dt>Boeing Global Services</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Boeing Global Services
+              <span id="bID">THEN</span> Show Sections: Boeing
+              <span id="bAN">AND</span> Set Field Value: Industry: Manufacturing
+              <span id="bAN">AND</span> Show Fields: 214829 | Chargeline or
+              PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide
+              Fields: Client Contact,Client Contact Email,Client
+              Division/Department <span id="bAN">AND</span> Set Field Value:
+              Staffing Account Director: Boeing - Clasing, Margaret - 1019126
+              <span id="bAN">AND</span> Set Field Value: Aquent Account Manager:
+              Margaret Clasing
+            </dd>
+            <dt>Boeing Graphic & Creative Requests</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Boeing Graphic &
+              Creative Requests <span id="bID">THEN</span> Show Sections: Boeing
+              <span id="bAN">AND</span> Set Field Value: Industry: Manufacturing
+              <span id="bAN">AND</span> Show Fields: 214829 | Chargeline or
+              PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide
+              Fields: Client Contact,Client Contact Email,Client
+              Division/Department <span id="bAN">AND</span> Set Field Value:
+              Staffing Account Director: Boeing - Clasing, Margaret - 1019126
+              <span id="bAN">AND</span> Set Field Value: Aquent Account Manager:
+              Margaret Clasing
+            </dd>
+            <dt>Boeing Information & Custom Signage</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Boeing Information &
+              Custom Signage <span id="bID">THEN</span> Show Sections: Boeing
+              <span id="bAN">AND</span> Set Field Value: Industry: Manufacturing
+              <span id="bAN">AND</span> Show Fields: 214829 | E-Ticket Number
+              <span id="bAN">AND</span> Hide Fields: Client Contact,Client
+              Contact Email,Client Division/Department
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: (null) <span id="bAN">AND</span> Set Field Value: Aquent
+              Account Manager: Margaret Clasing
+            </dd>
+            <dt>Boeing International</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Boeing International
+              <span id="bID">THEN</span> Show Sections: Boeing
+              <span id="bAN">AND</span> Set Field Value: Industry: Manufacturing
+              <span id="bAN">AND</span> Show Fields: 214829 | Chargeline or
+              PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide
+              Fields: Client Contact,Client Contact Email,Client
+              Division/Department <span id="bAN">AND</span> Set Field Value:
+              Staffing Account Director: Boeing - Clasing, Margaret - 1019126
+              <span id="bAN">AND</span> Set Field Value: Aquent Account Manager:
+              Margaret Clasing
+            </dd>
+            <dt>Boeing MAPS</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Boeing MAPS
+              <span id="bID">THEN</span> Show Sections: Boeing
+              <span id="bAN">AND</span> Set Field Value: Industry: Manufacturing
+              <span id="bAN">AND</span> Show Fields: 214829 | Chargeline or
+              PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide
+              Fields: Client Contact,Client Contact Email,Client
+              Division/Department <span id="bAN">AND</span> Set Field Value:
+              Staffing Account Director: Boeing - Clasing, Margaret - 1019126
+              <span id="bAN">AND</span> Set Field Value: Aquent Account Manager:
+              Margaret Clasing
+            </dd>
+            <dt>Boeing Photo Services and Support</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Boeing Photo Services
+              and Support <span id="bID">THEN</span> Show Sections: Boeing
+              <span id="bAN">AND</span> Set Field Value: Industry: Manufacturing
+              <span id="bAN">AND</span> Show Fields: 214829 | Chargeline or
+              PO#,214829 | RMS/Workfront Number,Location
+              <span id="bAN">AND</span> Hide Fields: Client Contact,Client
+              Contact Email,Client Division/Department
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Boeing - Clasing, Margaret - 1019126
+              <span id="bAN">AND</span> Set Field Value: Aquent Account Manager:
+              Margaret Clasing
+            </dd>
+            <dt>Boeing Recycling Program</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Show Sections: Boeing
+              <span id="bAN">AND</span> Set Field Value: Industry: Manufacturing
+              <span id="bAN">AND</span> Show Fields: 214829 | Chargeline or
+              PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide
+              Fields: Client Contact,Client Contact Email,Client
+              Division/Department <span id="bAN">AND</span> Set Field Value:
+              Staffing Account Director: (null) <span id="bAN">AND</span> Set
+              Field Value: Aquent Account Manager: Margaret Clasing
+            </dd>
+            <dt>Boeing Stores</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Boeing Stores
+              <span id="bID">THEN</span> Show Sections: Boeing
+              <span id="bAN">AND</span> Set Field Value: Industry: Manufacturing
+              <span id="bAN">AND</span> Show Fields: 214829 | Chargeline or
+              PO#,214829 | RMS/Workfront Number <span id="bAN">AND</span> Hide
+              Fields: Client Contact,Client Contact Email,Client
+              Division/Department <span id="bAN">AND</span> Set Field Value:
+              Staffing Account Director: Boeing - Clasing, Margaret - 1019126
+              <span id="bAN">AND</span> Set Field Value: Aquent Account Manager:
+              Margaret Clasing
+            </dd>
+            <dt>Canon Design Group</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Canon Design Group
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Canon - Geron, April - 2603193
+            </dd>
+            <dt>Casper Sleep, Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Casper Sleep, Inc.
+              <span id="bID">THEN</span> Set Field Options: Staffing Account
+              Director: Casper - DeLorenzo, Frank - 2868252( 247922)
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Casper - DeLorenzo, Frank - 2868252
+            </dd>
+            <dt>Charles Scwab</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Charles Schwab
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Clearwater Analytics</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Clearwater Analytics
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>COBRA</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | COBRA
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned <span id="bAN">AND</span> Set Field Value:
+              Deliverable Type_acct: Confidential <span id="bAN">AND</span> Set
+              Field Value: Deliverable Subtype_acct: Confidential
+              <span id="bAN">AND</span> Set Field Value:
+            </dd>
+            <dt>Colgate Palmolive</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Colgate Palmolive
+              <span id="bID">THEN</span> Show Sections: Colgate
+              <span id="bAN">AND</span> Set Field Value: Industry: Household
+              Products <span id="bAN">AND</span> Hide Fields: Client Contact
+              Email,Client Contact,Tier,Taxable,Tax % ,Aquent Account
+              Manager,Client Division/Department,Total Deliverable
+              Quantity,Project Documents <span id="bAN">AND</span> Set Field
+              Value: Staffing Account Director: Unassigned
+            </dd>
+            <dt>Constellis, LLC</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Constellis, LLC
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>CVS Health Corporation</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | CVS Health Corporation
+              <span id="bID">THEN</span> Show Sections: CVS
+              <span id="bAN">AND</span> Hide Fields: Client Division/Department
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: CVS - Fredette, Brooke - 600171946
+            </dd>
+            <dt>CVS - non-POG</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | CVS Health Corporation
+              <span id="bAN">AND</span> 211688 | Team is non-POG
+              <span id="bID">THEN</span> Show Fields: 211688 | Total
+              Deviations,211688 | Deliverable Types,211688 | Total Deviations
+            </dd>
+            <dt>CVS - Planogram</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | CVS Health Corporation
+              <span id="bAN">AND</span> 211688 | Team is Planogram
+              <span id="bID">THEN</span> Show Fields: 211688 | Deliverable
+              Types,211688 | Total Deviations,211688 | Total Deviations
+            </dd>
+            <dt>Dealer.com</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Set Field Value: Aquent Group
+              (ITS/Studios/Staffing): A500 <span id="bAN">AND</span> Set Field
+              Value: Staffing Account Director: Unassigned
+            </dd>
+            <dt>Dell</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Dell
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Department of Treasury/IRS</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Department of the
+              Treasury/IRS <span id="bID">THEN</span> Set Field Value: Staffing
+              Account Director: Unassigned
+            </dd>
+            <dt>Dev6 | Morgan Stanley</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Morgan Stanley
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: (null)
+            </dd>
+            <dt>DXC Technology</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | DXC Technology
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>DXC Technology (Managed Services)</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | DXC Technology
+              (Managed Services) <span id="bID">THEN</span> Set Field Value:
+              Staffing Account Director: HPMS - Martin, Kimberly - 358596
+              <span id="bAN">AND</span> Set Field Value: Aquent Group
+              (ITS/Studios/Staffing): Managed Services
+            </dd>
+            <dt>Expedia Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Expedia Inc.
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Exxon Mobil Corporation - No Tax</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | ExxonMobil Corporation
+              - No Tax <span id="bID">THEN</span> Set Field Value: Industry:
+              Energy <span id="bAN">AND</span> Hide Fields: Client
+              Division/Department,ClContact Email,Client Contact
+              <span id="bAN">AND</span> Show Sections: Exxon
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: ExxonMobil - Feldman, Matthew - 1480182
+            </dd>
+            <dt>Exxon Mobil Corporation - Tax</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | ExxonMobil Corporation
+              - Tax <span id="bID">THEN</span> Set Field Value: Industry: Energy
+              <span id="bAN">AND</span> Hide Fields: Client
+              Division/Department,Client Contact Email,Client Contact
+              <span id="bAN">AND</span> Set Field Value: Taxable: Yes
+              <span id="bAN">AND</span> Set Field Value: Tax Type: Tax based on
+              role of person doing work <span id="bAN">AND</span> Set Field
+              Value: Tax %: 8.25 <span id="bAN">AND</span> Show Sections: Exxon
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: ExxonMobil - Feldman, Matthew - 1480182
+            </dd>
+            <dt>Fidelity Investments</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Fieldglass@HP (Managed Staffing)</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | zzz[03/07/2022]
+              Fieldglass@HP (Managed Services) <span id="bID">THEN</span> Set
+              Field Value: Staffing Account Director: Unassigned
+            </dd>
+            <dt>Frontier Communications Corporation</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>General Motors (ITS)</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | zzz[12/31/2021]
+              General Motors (ITS) <span id="bID">THEN</span> Set Field Options:
+              Staffing Account Director: GM - McClain, Randy - 1268312( 247922)
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Glenmark Specialty S.A.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Glenmark Specialty
+              S.A. <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Goodwin</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Show Sections: ()
+            </dd>
+            <dt>Goldman Sachs Bank USA</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>GRAIL, Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | zzz[02/21/2022] GRAIL,
+              Inc. <span id="bID">THEN</span> Set Field Options: Staffing
+              Account Director: GRAIL - Poulos, Kathleen - 2854096( 247922)
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: GRAIL - Poulos, Kathleen - 2854096
+            </dd>
+            <dt>Groupon, Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Groupon, Inc.
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Groupon - Brown, Jordan - 2272502
+            </dd>
+            <dt>GS Global Resources</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Hewlett Packard Enterprise</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Hewlett Packard
+              Enterprise <span id="bID">THEN</span> Set Field Value: Staffing
+              Account Director: Unassigned
+            </dd>
+            <dt>Hewlett Packard Enterprise (Managed Services)</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Hewlett Packard
+              Enterprise (Managed Services) <span id="bID">THEN</span> Set Field
+              Value: Billing Frequency: Monthly <span id="bAN">AND</span> Set
+              Field Value: Industry: Technology: Online, Software & Cloud
+              <span id="bAN">AND</span> Set Field Value: Aquent Group
+              (ITS/Studios/Staffing): Managed Services
+              <span id="bAN">AND</span> Set Field Value: Project Time Approver:
+              73821(73821) <span id="bAN">AND</span> Set Field Value: Staffing
+              Account Director: HPMS - Martin, Kimberly - 358596
+            </dd>
+            <dt>HP Inc. (Managed Services)</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | HP Inc. (Managed
+              Services) <span id="bID">THEN</span> Set Field Value: Billing
+              Frequency: Monthly <span id="bAN">AND</span> Set Field Value:
+              Industry: Technology: Devices <span id="bAN">AND</span> Set Field
+              Value: Aquent Group (ITS/Studios/Staffing): Managed Services
+              <span id="bAN">AND</span> Set Field Value: Project Time Approver:
+              73821(73821) <span id="bAN">AND</span> Set Field Value: Staffing
+              Account Director: HPMS - Martin, Kimberly - 358596
+            </dd>
+            <dt>Hines Interests Limited Partnerships</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>HMR Weight Management Services Corp</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Show Sections: HMR
+              <span id="bAN">AND</span> Hide Fields: Tier,Client Contact,Client
+              Contact Email <span id="bAN">AND</span> Set Field Value: Revenue:
+              0 <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>HP Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | HP Inc.
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>HPI CDD</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | HPI CDD
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>HPI KM</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | HPI KM
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Humana Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Humana Inc.
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned <span id="bAN">AND</span> Show Sections:
+              Humana <span id="bAN">AND</span> Show Fields: 216962 |
+              Program,216962 | Category
+            </dd>
+            <dt>ICMA-RC</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | ICMA-RC
+              <span id="bID">THEN</span> Set Field Options: Staffing Account
+              Director: ICMA- RC - Moore, Sarah Tyler - 2658703( 247922)
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: ICMA-RC - Moore, Sarah Tyler - 2658703
+            </dd>
+            <dt>Intellectual Property Owners Association</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Intellectual Property
+              Owners Association <span id="bID">THEN</span> Show Sections:
+              Intellectual Property Owners Association
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Johnson & Johnson</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Johnson & Johnson
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>JP Morgan Chase Bank, National Association</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Kaiser Permanente</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Kaiser Permanente
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Kaiser Permanente - Poulos, Kathleen - 2854096
+            </dd>
+            <dt>Kelly Services @ Deer (ITS)</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Kelly Services @ Deere
+              (ITS) <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Lockheed Martin Corporation</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Lockheed Martin
+              Corporation <span id="bID">THEN</span> Show Sections: Lockheed
+              Martin Corporation <span id="bAN">AND</span> Set Field Value:
+              Staffing Account Director: Lockheed Martin - Thurman, Ray -
+              1663208
+            </dd>
+            <dt>LPL Financial</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | LPL Financial LLC
+              <span id="bID">THEN</span> Show Sections: LPL Financial
+              <span id="bAN">AND</span> Set Field Value: Industry: Financial:
+              Banking <span id="bAN">AND</span> Hide Fields: Aquent Account
+              Manager,Taxable,Country,Client Division/Department,Tier
+              <span id="bAN">AND</span> Set Field Value: Billing Frequency:
+              Monthly <span id="bAN">AND</span> Set Field Value: Staffing
+              Account Director: Unassigned
+            </dd>
+            <dt>Liberty Mutual Insurance Company</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Liberty Mutual
+              Insurance Company <span id="bID">THEN</span> Set Field Options:
+              Staffing Account Director: Liberty Mutual - Doherty, William -
+              2798895( 247922) <span id="bAN">AND</span> Set Field Value:
+              Staffing Account Director: Liberty Mutual - Doherty, William -
+              2798895
+            </dd>
+            <dt>Marriott International Global Digital</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Marriott International
+              Global Digital <span id="bID">THEN</span> Set Field Value:
+              Staffing Account Director: Unassigned
+            </dd>
+            <dt>Marriott International MDS</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Marriott International
+              MDS <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Marriott International MDS OT</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | zzz[09/06/2021]
+              Marriott International MDS OT <span id="bID">THEN</span> Set Field
+              Value: Staffing Account Director: Unassigned
+            </dd>
+            <dt>Merck & Company, Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Merck & Company, Inc.
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>MetLife Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | MetLife Inc.
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>MetLife</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | MetLife Inc.
+              <span id="bID">THEN</span> Show Sections: MetLife
+              <span id="bAN">AND</span> Set Field Value: Industry: Financial:
+              Insurance
+            </dd>
+            <dt>Micro Focus (Managed Staffing)</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Micro Focus (Managed
+              Services) <span id="bID">THEN</span> Set Field Value: Staffing
+              Account Director: Unassigned
+            </dd>
+            <dt>Mozilla</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Mozilla
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>McDonald's Corporation</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | McDonald&amp;apos;s
+              Corporation <span id="bID">THEN</span> Set Field Value: Staffing
+              Account Director: Unassigned
+            </dd>
+            <dt>Microfocus (Managed Services)</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Micro Focus (Managed
+              Services) <span id="bID">THEN</span> Set Field Value: Billing
+              Frequency: Monthly <span id="bAN">AND</span> Set Field Value:
+              Project Status: Start Pending <span id="bAN">AND</span> Set Field
+              Value: Industry: Technology: Devices <span id="bAN">AND</span> Set
+              Field Value: Aquent Group (ITS/Studios/Staffing): Managed Services
+              <span id="bAN">AND</span> Set Field Value: Project Time Approver:
+              73821(73821) <span id="bAN">AND</span> Set Field Options: Staffing
+              Account Director: Unassigned <span id="bAN">AND</span> Set Field
+              Value: Staffing Account Director: Unassigned
+            </dd>
+            <dt>Microsoft Canada Studios</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Microsoft Canada
+              Studios <span id="bID">THEN</span> Show Sections: Microsoft
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Unassigned <span id="bAN">AND</span> Set Field Value:
+              Billing Type: Fee Based Billing(107)
+            </dd>
+            <dt>Microsoft Cloud + AI Fee</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Microsoft Cloud + AI
+              Fee <span id="bID">THEN</span> Show Sections: Microsoft
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Microsoft Cloud + AI T&amp;M</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Show Sections: Microsoft
+            </dd>
+            <dt>Microsoft DevRelations C+L Managed Service</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Microsoft DevRelations
+              C+L Managed Service <span id="bID">THEN</span> Show Sections:
+              Microsoft <span id="bAN">AND</span> Set Field Value: Staffing
+              Account Director: Unassigned
+            </dd>
+            <dt>Microsoft Exp+D Content</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Microsoft Exp+D
+              Content <span id="bID">THEN</span> Show Sections: Microsoft
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Microsoft Gaming</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Microsoft Gaming
+              <span id="bID">THEN</span> Show Sections: Microsoft
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Microsoft Marketing & Consumer Business Management</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Microsoft Gaming
+              <span id="bID">THEN</span> Show Sections: Microsoft
+            </dd>
+            <dt>Microsoft ML&amp;D Creative Studio</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Microsoft ML&amp;D
+              Creative Studio <span id="bID">THEN</span> Show Sections:
+              Microsoft <span id="bAN">AND</span> Set Field Value: Staffing
+              Account Director: Unass
+            </dd>
+            <dt>Microsoft MSN</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | zzz[07/05/2021]
+              Microsoft MSN <span id="bID">THEN</span> Show Sections: Microsoft
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Microsoft Turn 10</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Microsoft Turn 10
+              <span id="bID">THEN</span> Show Sections: Microsoft
+            </dd>
+            <dt>Microsoft WCB</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Microsoft WCB
+              <span id="bID">THEN</span> Show Sections: Microsoft
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Mphasis @ HP Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Mphasis @ HP Inc.
+              <span id="bID">THEN</span> Set Field Options: Staffing Account
+              Director: Mphasis - Martin, Kimberly - 358596( 247922)
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Mphasis - Martin, Kimberly - 358596
+            </dd>
+            <dt>National Renewable Energy Lab</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Nike, Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>ODVA Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | ODVA Inc.
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Oracle Corporation</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Oracle Corporation
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Pandora Media</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Pandora Media, LLC
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Pandora - Salazar, Melissa - 2451572
+            </dd>
+            <dt>PBF Energy</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | PBF Energy
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Peace Corps</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Peace Corps
+              <span id="bID">THEN</span> Set Field Options: Staffing Account
+              Director: Peace Corps - Ray Thurman - 1663208,Unassigned( 263245)
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Peace Corps - Ray Thurman - 1663208
+            </dd>
+            <dt>Pekin Insurance Company (ITS)</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Pekin Insurance
+              Company (ITS) <span id="bID">THEN</span> Set Field Value: Staffing
+              Account Director: Unassigned
+            </dd>
+            <dt>Pennzoil-Quaker State Company</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Pennzoil-Quaker State
+              Company <span id="bID">THEN</span> Set Field Options: Staffing
+              Account Director: Pennzoil - Huynh, Leila - 2848643( 247922)
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Pennzoil - Huynh, Leila - 2848643
+            </dd>
+            <dt>Pitney Bowes Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Rakuten USA, Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Rakuten USA, Inc.
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Raytheon Company</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Raytheon Company
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Rockwell Automation - No Tax</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Rockwell Automation
+              â€“ No tax <span id="bID">THEN</span> Show Sections: Rockwell
+              <span id="bAN">AND</span> Set Field Value: Industry: Manufacturing
+              <span id="bAN">AND</span> Hide Fields: Client Contact,Client
+              Contact Email,Client Division/Department
+              <span id="bAN">AND</span> Show Fields: Actual Final Delivery Date
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Rockwell Automation - Tax</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Rockwell Automation
+              â€“ Tax <span id="bID">THEN</span> Show Sections: Rockwell
+              <span id="bAN">AND</span> Show Fields: Tax Code,Tax %,Tax
+              Type,Actual Final Delivery Date <span id="bAN">AND</span> Set
+              Field Value: Tax %: 8 <span id="bAN">AND</span> Set Field Options:
+              Tax Type: Tax based on delivery location
+              <span id="bAN">AND</span> Set Field Value: Taxable: Yes
+              <span id="bAN">AND</span> Set Field Value: Industry: Manufacturing
+              <span id="bAN">AND</span> Hide Fields: Client Contact Email,Client
+              Contact,Client Division/Department <span id="bAN">AND</span> Set
+              Field Value: Staffing Account Director: Unassigned
+            </dd>
+            <dt>Salesforce.com</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Salesforce.com
+              <span id="bID">THEN</span> Set Field Options: Staffing Account
+              Director: Salesforce - Cox, Caroline - 2855226( 247922)
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Sephora</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | zzz[11/01/2021]
+              Sephora <span id="bID">THEN</span> Set Field Value: Industry:
+              Etail / Retail <span id="bAN">AND</span> Set Field Value: Staffing
+              Account Director: Sephora - Howard, Kimberly - 1970029
+            </dd>
+            <dt>Shutterfly BorrowLenses</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Shutterfly Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Shutterfly Inc.
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Solo</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Synchrony Financial</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Synchrony Financial
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Texas Instruments Incorporated</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Texas Instruments - Tiefenthaler, Jessica - 2511455
+            </dd>
+            <dt>Thurgood Marshall College Fund</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Tradesmen International</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Tradesmen
+              International <span id="bID">THEN</span> Set Field Value: Staffing
+              Account Director: Unassigned
+            </dd>
+            <dt>VMware</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | VMware
+              <span id="bID">THEN</span> Show Sections: VMware
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Walmart, Inc.</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | Walmart Inc.
+              <span id="bID">THEN</span> Set Field Options: Staffing Account
+              Director: Walmart - Stevenson, Sam - 2487746( 247922)
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Walmart - Stevenson, Sam - 2487746
+            </dd>
+            <dt>Westfield Corporate Marketing</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT |
+              Unibail-Rodamco-Westfield Corporate Marketing
+              <span id="bID">THEN</span> Show Fields: 213712 | Deliverable
+              <span id="bAN">AND</span> Set Field Value: Industry: Etail /
+              Retail <span id="bAN">AND</span> Hide Fields: Client
+              Division/Department <span id="bAN">AND</span> Show Sections: URW
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Westfield Other Divisions</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT |
+              Unibail-Rodamco-Westfield Other Divisions
+              <span id="bID">THEN</span> Show Sections: URW
+              <span id="bAN">AND</span> Show Fields: 213712 | Deliverable
+              <span id="bAN">AND</span> Set Field Value: Staffing Account
+              Director: Unassigned
+            </dd>
+            <dt>Dev6 | Audi of America</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is undefined
+              <span id="bID">THEN</span> Set Field Value: Staffing Account
+              Director: (null)<span id="deliverables"></span>
+            </dd>
+            <dt>Deliverable Type | Admin Confidential</dt>
+            <dd>
+              <span id="bIF">IF</span> Deliverable Type_acct is Confidential
+              <span id="bAN">AND</span> Client is not AQUENT | COBRA
+              <span id="bID">THEN</span> Show Message: This deliverable type can
+              not be used without express permission. Please click OK, re-open
+              the project and select a different deliverable type. Contact
+              StudiosAdmins@aquent.com should you have any questions. DISPLAY:
+              Every time the form is modified
+            </dd>
+            <dt>Deliverable Type | Options</dt>
+            <dd>
+              <span id="bIF">IF</span> User Role is not Account Admin
+              <span id="bID">THEN</span> Set Field Options: Deliverable
+              Type_acct: Content (voice),Digital,Digital (DEV only),Digital (FED
+              only)( 230228),Managed Services( 230229),Marketing(
+              230230),Photography( 230231),Presentation( 230232),Print(
+              230233),Video( 260746)
+            </dd>
+            <dt>Deliverable Subtype | Content (voice)</dt>
+            <dd>
+              <span id="bIF">IF</span> Deliverable Type_acct is Content (voice)
+              <span id="bID">THEN</span> Set Field Options: Deliverable
+              Subtype_acct: Copy Editing,Instructional Design,Marketing Writing(
+              259961),Proposal Writing( 259964),Social Media( 259965),Speech
+              Writing( 259966),Technical Writing( 259969)
+            </dd>
+            <dt>Deliverable Subtype | Digital</dt>
+            <dd>
+              <span id="bIF">IF</span> Deliverable Type_acct is Digital
+              <span id="bID">THEN</span> Set Field Options: Deliverable
+              Subtype_acct: Animated Banner,Animated Digital Panel( 259947),App
+              Development( 259948),CGI (3D Illustration)( 259949),Dynamic Page
+              (dashboard)( 259952),eBook( 259953),eLearning( 259954),Email(
+              259955),Interactive Digital Panel( 259957),Interactive Kiosk(
+              259958),iPad( 259959),Landing Page( 259960),Microsite(
+              259962),Mobile Messaging( 259963),Social Media( 259965),Static AD
+              Banner( 259967),Static Digital Panel( 259968),User Experience /
+              Engagement( 259970),Virtual Reality( 259971),Website( 259972)
+            </dd>
+            <dt>Deliverable Subtype | Digital (DEV only)</dt>
+            <dd>
+              <span id="bIF">IF</span> Deliverable Type_acct is Digital (DEV
+              only) <span id="bID">THEN</span> Set Field Options: Deliverable
+              Subtype_acct: Animated Banner,Animated Digital Panel( 259947)>App
+              Development( 259948),Content Migration( 260001),Dynamic Page
+              (dashboard)( 259952),eBook( 259953),eLearning( 259954),Email(
+              259955),Interactive Digital Panel( 259957),Interactive Kiosk(
+              259958),iPad( 259959),Landing Page( 259960),Microsite(
+              259962),Social Media( 259965),User Experience / Engagement(
+              259970),Virtual Reality( 259971),Website( 259972)
+            </dd>
+            <dt>Deliverable Subtype | Digital (FED only)</dt>
+            <dd>
+              <span id="bIF">IF</span> Deliverable Type_acct is Digital (FED
+              only) <span id="bID">THEN</span> Set Field Options: Deliverable
+              Subtype_acct: 360 Video,Animated Banner( 259946),Animated Digital
+              Panel( 259947),App Development( 259948),Dynamic Page (dashboard)(
+              259952),eBook( 259954),eLearning( 259953),Email(
+              259955),Interactive Digital Panel( 259957),Interactive Kiosk(
+              259958),iPad( 259959),Landing Page( 259960),Microsite(
+              259962),Social Media( 259965),User Experience / Engagement(
+              259970),Virtual Reality( 259971),Website( 259972)
+            </dd>
+            <dt>Deliverable Subtype | Marketing</dt>
+            <dd>
+              <span id="bIF">IF</span> Deliverable Type_acct is Marketing
+              <span id="bID">THEN</span> Set Field Options: Deliverable
+              Subtype_acct: Brand Management,Communication Management(
+              259999),Content Management( 260000),Demand Gen( 260002),Event
+              Execution( 260005),Event Management( 260006),Image Management(
+              260009),Market Research / Analytics( 260013),Marketing
+              Coordination( 260014),Product Management( 260023),Training(
+              260027)
+            </dd>
+            <dt>Deliverable Subtype | Managed Services</dt>
+            <dd>
+              <span id="bIF">IF</span> Deliverable Type_acct is Managed Services
+              <span id="bID">THEN</span> Set Field Options: Deliverable
+              Subtype_acct: CRE - Art or Creative Director,CRE - Editor or
+              Proofreader( 260748),CRE - Fashion Designer( 260749),CRE - Film
+              and Video Editor( 260750),CRE - Graphic Designer( 260751),CRE -
+              Illustrator( 260752),CRE - Industrial Designer( 260753),CRE -
+              Interior Designer( 260754),CRE - Merchandise Displayer or
+              Coordinator( 260755),CRE - Package Designer( 260756),CRE -
+              Photographer( 260758),CRE - Presentation Designer( 260757),CRE -
+              Production Artist( 260759),CRE - Public Relations Specialist(
+              260760),CRE - Social Media Specialist( 260761),CRE - Special
+              Effects Artist or Animator( 260762),CRE - Technical Writer(
+              260763),CRE - Unqualified( 260764),CRE - Web or Digital Designer(
+              260765),CRE - Writer( 260766),MAR - Account Manager( 260767),MAR -
+              Administrative Support( 260768),MAR - Digital Marketing
+              Specialist( 260769),MAR - Internal Communications( 260770),MAR -
+              Marketing Data Analyst( 260771),MAR - Market Research Analyst(
+              260772),MAR - Meeting( 260773), Convention( 260774), or Event
+              Planner( 260775),MAR - Other Marketing Specialist( 260777),MAR -
+              Product Manager( 260776),MAR - Project Manager( 260778),MAR -
+              Training and Development Specialist( 260779),TECH - Computer
+              Support Specialist( 260780),TECH - Computer Systems
+              Engineer/Architect( 260781),TECH - Data Scientist( 260782),TECH -
+              Information Architect( 260783),TECH - Marketing Technology
+              Management( 260784),TECH - Non Marketing Data Analyst(
+              260785),TECH - Product Designer( 260786),TECH - Service
+              Designer/CX( 260787),TECH - Software Developer( 260788),TECH -
+              Software Quality Assurance Analyst or Tester( 260789),TECH - User
+              Researcher( 260790)
+            </dd>
+            <dt>Deliverable Subtype | Photography</dt>
+            <dd>
+              <span id="bIF">IF</span> Deliverable Type_acct is Photography
+              <span id="bID">THEN</span> Set Field Options: Deliverable
+              Subtype_acct: Event,Location( 260012),Portrait / Passport(
+              260018),Product( 260022),Retouching( 260024)
+            </dd>
+            <dt>Deliverable Subtype | Presentation</dt>
+            <dd>
+              <span id="bIF">IF</span> Deliverable Type_acct is Presentation
+              <span id="bID">THEN</span> Set Field Options: Deliverable
+              Subtype_acct: Acrobat,Keynote( 260011),Powerpoint( 260020)
+            </dd>
+            <dt>Deliverable Subtype | Print</dt>
+            <dd>
+              <span id="bIF">IF</span> Deliverable Type_acct is Print
+              <span id="bID">THEN</span> Set Field Options: Deliverable
+              Subtype_acct: Advertising / AD,Brochure( 259996),Catalog(
+              259997),Collateral( 259998),Direct Mail( 260003),Exhibit(
+              260007),Floor / Window Graphic( 260008),Infographic(
+              260010),Packaging( 260016),Poster( 260019),Premium / Swag(
+              260021),Signage( 260025),Template / Self-service( 260026)
+            </dd>
+            <dt>Deliverable Subtype | Video</dt>
+            <dd>
+              <span id="bIF">IF</span> Deliverable Type_acct is Video
+              <span id="bID">THEN</span> Set Field Options: Deliverable
+              Subtype_acct: 360 Video,Audio Production( 259994),Motion Graphics(
+              260015),Podcast( 260017),Video Production / Editing(
+              260028),Videography( 260029),Webcast( 260030)
+            </dd>
+            <dt>Deliverable Subtype | zzADMIN ONLY_NB</dt>
+            <dd>
+              <span id="bIF">IF</span> Deliverable Type_acct is zzADMIN ONLY_NB
+              <span id="bID">THEN</span> Set Field Options: Deliverable
+              Subtype_acct: zzADMIN ONLY_NB <span id="bAN">AND</span> Set Field
+              Value: Deliverable Subtype_acct: zzADMIN ONLY_NB
+            </dd>
+            <dt>TEST Client</dt>
+            <dd>
+              <span id="bIF">IF</span> Client is AQUENT | zzzTest Client
+              <span id="bID">THEN</span> Show Sections: Aetna
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- https://www.htmlwasher.com/ -->
