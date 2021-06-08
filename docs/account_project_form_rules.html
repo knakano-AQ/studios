@@ -20,7 +20,10 @@ body {
   padding: 4rem;
   z-index: 1;
 }
-
+#colNav {
+  width: 20px;
+  background-color: transparent;
+}
 dt {
   color: #d6d6d6;
   text-decoration: underline;
@@ -100,8 +103,6 @@ background-color: rgb(4, 131, 0);
       <div class="col">
         <div class="row" id="sec1">
           <h1 id="admin" style="text-align: center;">Account Level Form Rules</h1>
-          <dl></dl>
-
           <dl>
             <dt>ADMIN | Billing Type - Fee Based Billing</dt>
             <dd><span id="bIF">IF</span> Billing Type is Fee Based Billing</dd>
@@ -272,7 +273,7 @@ background-color: rgb(4, 131, 0);
             <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
             <dd><span id="bAN">AND</span> Show Fields: 214829 | E-Ticket Number</dd>
             <dd><span id="bAN">AND</span> Hide Fields: Client Contact, Client Contact Email, Client Division/Department</dd>
-            <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: (null)</dd>
+            <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: (Boeing - Clasing, Margaret - 1019126)</dd>
             <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager: Margaret Clasing</dd>
 
             <dt>Boeing International</dt>
@@ -301,15 +302,6 @@ background-color: rgb(4, 131, 0);
             <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or PO#,214829 | RMS/Workfront Number,Location</dd>
             <dd><span id="bAN">AND</span> Hide Fields: Client Contact,Client Contact Email,Client Division/Department</dd>
             <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Boeing - Clasing, Margaret - 1019126</dd>
-            <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager: Margaret Clasing</dd>
-
-            <dt>Boeing Recycling Program</dt>
-            <dd><span id="bIF">IF</span> Client is undefined</dd>
-            <dd><span id="bID">THEN</span> Show Sections: Boeing</dd>
-            <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
-            <dd><span id="bAN">AND</span> Show Fields: 214829 | Chargeline or PO#,214829 | RMS/Workfront Number</dd>
-            <dd><span id="bAN">AND</span> Hide Fields: Client Contact, Client Contact Email, Client Division/Department</dd>
-            <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: (null)</dd>
             <dd><span id="bAN">AND</span> Set Field Value: Aquent Account Manager: Margaret Clasing</dd>
 
             <dt>Boeing Stores</dt>
@@ -387,7 +379,7 @@ background-color: rgb(4, 131, 0);
 
             <dt>Dev6 | Morgan Stanley</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | Morgan Stanley</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: (null)</dd>
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: (MSLY001 - Nielsen, Bryce - 2820616)</dd>
 
             <dt>DXC Technology</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | DXC Technology</dd>
@@ -793,7 +785,7 @@ background-color: rgb(4, 131, 0);
 
             <dt>Dev6 | Audi of America</dt>
               <dd><span id="bIF">IF</span> Client is undefined</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: (null)<span id="deliverables"></span></dd>
+              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: (AUDI001 - Price, Patricia - 1773920)<span id="deliverables"></span></dd>
 
             <dt>Deliverable Type | Admin Confidential</dt>
               <dd><span id="bIF">IF</span> Deliverable Type_acct is Confidential</dd>
