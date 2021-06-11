@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Page</title>
+</head>
+<body>
+  <p>1. ADMIN | Billing Type - Fee Based Billing</p>
+  <p>IF Billing Type(194797) is Fee Based Billing</p>
+  <p>THEN Show Fields: Fee Type(199119)</p>
+  <p>2. ADMIN | Industry - Other Industry</p>
+  <p>IF Industry(182987) is Other</p>
+  <p>THEN Show Fields: Other Industry(182988)</p>
+  <p>3. ADMIN | Taxable - Tax Type and %</p>
+  <p>IF Taxable(182989) is Yes(173930)</p>
+  <p>THEN Show Fields: Tax Type(184327),Tax %(184328)</p>
+  <p>4. ADMIN | Hide Revenue Fields (PM)</p>
+  <p>IF User Role(176836) is Project Member</p>
+  <p>THEN Hide Fields: Est Revenue(177084),Revenue(177087)</p>
+  <p>5. ADMIN | Admin Only User Fields</p>
+  <p>IF User Role(176836) is Account Admin</p>
+  <p>AND User(176835) is not kmyers@aquent.com</p>
+  <p>AND User(176835) is not jswanson@aquent.com</p>
+  <p>AND User(176835) is not cjohnson@aquent.com</p>
+  <p>THEN Show Fields: Staffing AD Manager(221495),Studios Sales</p>
+  <p>Representative(221493),Staffing VP(221496),Aquent Group</p>
+  <p>(ITS/Studios/Staffing)(216288),Staffing Account Director(250306)</p>
+  <p>AND Show Sections: Studios Operating Characteristics(219836)</p>
+  <p>6. ADMIN | Operating Characteristics</p>
+  <p>IF Project Name(177072) is ADMIN ONLY | Studios Operating</p>
+  <p>Characteristics</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>AND Set Field Value: Deliverable Type_acct(241941): zzADMIN</p>
+  <p>ONLY_NB(236551)</p>
+  <p>AND Set Field Value: Total Deliverable Quantity(183251): 0</p>
+  <p>AND Set Field Value: Billing Type(194797): Time & Materials(106)</p>
+  <p>AND Set Field Value: Fee Type(199119): Project Deliverable(191042)</p>
+  <p>AND Set Field Value: Billing Status(194798): Do Not Invoice(108)</p>
+  <p>AND Set Field Value: Project Time Approver(194799): 75970(75970)</p>
+  <p>AND Set Field Value: Est Revenue(177084): 0</p>
+  <p>AND Set Field Value: Revenue(177087): 0</p>
+  <p>AND Set Field Value: Project Status(177081): Complete(168544)</p>
+  <p>7. ADMIN | SOC - Data Transfer</p>
+  <p>IF Data Transfer(266791) is Yes(269420)</p>
+  <p>THEN Show Message: Please contact Aquent Legal to ensure we are</p>
+  <p>doing so properly.</p>
+  <p>DISPLAY: Only on creation</p>
+  <p>8. ADMIN | SOC - Service Providers or Contractors</p>
+  <p>IF Service Providers or Contractors_1(266789) is Yes(269418)</p>
+  <p>THEN Show Fields: Service Providers or Contractors_2(266790)</p>
+  <p>9. Adobe Systems, Inc.</p>
+  <p>IF Client(177076) is AQUENT | Adobe Systems, Inc.</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306): Adobe -</p>
+  <p>Hernandez, Jeremy - 2728269(251278)</p>
+  <p>10. Aetna Life Insurance Company</p>
+  <p>IF Client(177076) is AQUENT | Aetna Life Insurance Company-CT</p>
+  <p>THEN Show Sections: Aetna(151091)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306): Aetna -</p>
+  <p>Fredette, Brooke - 600171946(251668)</p>
+  <p>11. AIG Inc.</p>
+  <p>IF Client(177076) is AQUENT | American International Group, Inc.</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306): AIG Inc. -</p>
+
+  <p>Grannell, Blake - 2267889(253712)</p>
+  <p>12. Anthem</p>
+  <p>IF Client(177076) is AQUENT | Anthem, Inc.</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306): Anthem -</p>
+  <p>Gottfried, Kate - 2212101(261077)</p>
+  <p>13. AON</p>
+  <p>IF Client(177076) is AQUENT | AON</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>14. Apple Media Japan</p>
+  <p>IF Client(177076) is AQUENT | Apple Media Japan</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>15. Badge Meter</p>
+  <p>IF Client(177076) is AQUENT | Badger Meter</p>
+  <p>THEN Set Field Options: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>16. Banner Quality Management, Inc.</p>
+  <p>IF Client(177076) is undefined</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>17. Barrette Outdoor Living</p>
+  <p>IF Client(177076) is AQUENT | Barrette Outdoor Living</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>18. Boeing Contract Labor</p>
+  <p>IF Client(177076) is AQUENT | Boeing Contract Labor</p>
+  <p>THEN Show Sections: Boeing(173617)</p>
+  <p>AND Show Fields: Beeline Req ID(243619),214829 |</p>
+  <p>Manager(243620)</p>
+
+  <p>AND Hide Fields: Chargeline(237357),PO#(237361),214829 |</p>
+  <p>Deliverable Type(221488),Round(243279),214829 | Client</p>
+  <p>Contact(221492),214829 | BP Requester(222003),214829 | BP Email</p>
+  <p>Address(222004),Industry(182987),Total Deliverable</p>
+  <p>Quantity(183251),Tier(219803),Billing</p>
+  <p>Frequency(203363),Taxable(182989),Client Contact(182993),Client</p>
+  <p>Contact Email(182994),Aquent Account Manager(182995),Aquent</p>
+  <p>Project Manager(183066),Aquent Group (ITS/Studios/Staffing)</p>
+  <p>(216288),Studios Sales Representative(221493),Staffing AD</p>
+  <p>Manager(221495),Staffing VP(221496),214829 | Business</p>
+  <p>Division(222002),214829 | Round(221489),214829 | Rush(221490)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>19. Canon Design Group</p>
+  <p>IF Client(177076) is AQUENT | Canon Design Group</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306): Canon -</p>
+  <p>Geron, April - 2603193(253542)</p>
+  <p>20. Casper Sleep, Inc.</p>
+  <p>IF Client(177076) is AQUENT | Casper Sleep, Inc.</p>
+  <p>THEN Set Field Options: Staffing Account Director(250306): Casper -</p>
+  <p>DeLorenzo(264406), Frank - 2868252( 247922)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306): Casper -</p>
+  <p>DeLorenzo, Frank - 2868252(264406)</p>
+  <p>21. Charles Scwab</p>
+  <p>IF Client(177076) is AQUENT | Charles Schwab</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>22. Clearwater Analytics</p>
+  <p>IF Client(177076) is AQUENT | Clearwater Analytics</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>23. COBRA</p>
+  <p>IF Client(177076) is AQUENT | COBRA</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+
+  <p>Unassigned(247922)</p>
+  <p>AND Set Field Value: Deliverable Type_acct(241941):</p>
+  <p>Confidential(257798)</p>
+  <p>AND Set Field Value: Deliverable Subtype_acct(259053):</p>
+  <p>Confidential(259950)</p>
+  <p>AND Set Field Value:</p>
+  <p>24. Colgate Palmolive</p>
+  <p>IF Client(177076) is AQUENT | Colgate Palmolive</p>
+  <p>THEN Show Sections: Colgate(173967)</p>
+  <p>AND Set Field Value: Industry(182987): Household Products(203173)</p>
+  <p>AND Hide Fields: Client Contact Email(182994),Client</p>
+  <p>Contact(182993),Tier(219803),Taxable(182989),Tax %</p>
+  <p>(184328),Aquent Account Manager(182995),Client</p>
+  <p>Division/Department(183065),Total Deliverable</p>
+  <p>Quantity(183251),Project Documents(177080)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>25. Constellis, LLC</p>
+  <p>IF Client(177076) is AQUENT | Constellis, LLC</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>26. CVS Health Corporation</p>
+  <p>IF Client(177076) is AQUENT | CVS Health Corporation</p>
+  <p>THEN Show Sections: CVS(136487)</p>
+  <p>AND Hide Fields: Client Division/Department(183065)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306): CVS -</p>
+  <p>Fredette, Brooke - 600171946(251669)</p>
+  <p>27. CVS - non-POG</p>
+  <p>IF Client(177076) is AQUENT | CVS Health Corporation</p>
+  <p>AND 211688 | Team(222970) is non-POG</p>
+  <p>THEN Show Fields: 211688 | Total Deviations(183508),211688 |</p>
+
+  <p>Deliverable Types(183512),211688 | Total Deviations(184329)</p>
+  <p>28. CVS - Planogram</p>
+  <p>IF Client(177076) is AQUENT | CVS Health Corporation</p>
+  <p>AND 211688 | Team(222970) is Planogram</p>
+  <p>THEN Show Fields: 211688 | Deliverable Types(183512),211688 |</p>
+  <p>Total Deviations(183508),211688 | Total Deviations(184329)</p>
+  <p>29. Dealer.com</p>
+  <p>IF Client(177076) is undefined</p>
+  <p>THEN Set Field Value: Aquent Group (ITS/Studios/Staffing)(216288):</p>
+  <p>A500</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>30. Dell</p>
+  <p>IF Client(177076) is AQUENT | Dell</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>31. Department of Treasury/IRS</p>
+  <p>IF Client(177076) is AQUENT | Department of the Treasury/IRS</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>32. Dev6 | Morgan Stanley</p>
+  <p>IF Client(177076) is AQUENT | Morgan Stanley</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306): MSLY001 -</p>
+  <p>Nielsen, Bryce - 2820616(273622)</p>
+  <p>33. DXC Technology</p>
+  <p>IF Client(177076) is AQUENT | DXC Technology</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>34. DXC Technology (Managed Services)</p>
+  <p>IF Client(177076) is AQUENT | DXC Technology (Managed Services)</p>
+
+  <p>THEN Set Field Value: Staffing Account Director(250306): HPMS -</p>
+  <p>Martin, Kimberly - 358596(258312)</p>
+  <p>AND Set Field Value: Aquent Group (ITS/Studios/Staffing)(216288):</p>
+  <p>Managed Services</p>
+  <p>35. Expedia Inc.</p>
+  <p>IF Client(177076) is AQUENT | Expedia Inc.</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>36. Exxon Mobil Corporation - No Tax</p>
+  <p>IF Client(177076) is AQUENT | ExxonMobil Corporation - No Tax</p>
+  <p>THEN Set Field Value: Industry(182987): Energy(173904)</p>
+  <p>AND Hide Fields: Client Division/Department(183065),Client Contact</p>
+  <p>Email(182994),Client Contact(182993)</p>
+  <p>AND Show Sections: Exxon(174005)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306): ExxonMobil -</p>
+  <p>Feldman, Matthew - 1480182(247914)</p>
+  <p>37. Exxon Mobil Corporation - Tax</p>
+  <p>IF Client(177076) is AQUENT | ExxonMobil Corporation - Tax</p>
+  <p>THEN Set Field Value: Industry(182987): Energy(173904)</p>
+  <p>AND Hide Fields: Client Division/Department(183065),Client Contact</p>
+  <p>Email(182994),Client Contact(182993)</p>
+  <p>AND Set Field Value: Taxable(182989): Yes(173930)</p>
+  <p>AND Set Field Value: Tax Type(184327): Tax based on role of person</p>
+  <p>doing work(175747)</p>
+  <p>AND Set Field Value: Tax %(184328): 8.25</p>
+  <p>AND Show Sections: Exxon(174005)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306): ExxonMobil -</p>
+  <p>Feldman, Matthew - 1480182(247914)</p>
+  <p>38. Fidelity Investments</p>
+  <p>IF Client(177076) is undefined</p>
+
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>39. Fieldglass@HP (Managed Staffing)</p>
+  <p>IF Client(177076) is AQUENT | zzz[03/07/2022] Fieldglass@HP</p>
+  <p>(Managed Services)</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>40. Frontier Communications Corporation</p>
+  <p>IF Client(177076) is undefined</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>41. General Motors (ITS)</p>
+  <p>IF Client(177076) is AQUENT | zzz[12/31/2021] General Motors (ITS)</p>
+  <p>THEN Set Field Options: Staffing Account Director(250306): GM -</p>
+  <p>McClain(262191), Randy - 1268312( 247922)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>42. Glenmark Specialty S.A.</p>
+  <p>IF Client(177076) is AQUENT | Glenmark Specialty S.A.</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>43. Goodwin</p>
+  <p>IF Client(177076) is undefined</p>
+  <p>THEN Show Sections: ()</p>
+  <p>44. Goldman Sachs Bank USA</p>
+  <p>IF Client(177076) is undefined</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>45. GRAIL, Inc.</p>
+  <p>IF Client(177076) is AQUENT | zzz[02/21/2022] GRAIL, Inc.</p>
+
+  <p>THEN Set Field Options: Staffing Account Director(250306): GRAIL -</p>
+  <p>Poulos(262017), Kathleen - 2854096( 247922)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306): GRAIL -</p>
+  <p>Poulos, Kathleen - 2854096(262017)</p>
+  <p>46. Groupon, Inc.</p>
+  <p>IF Client(177076) is AQUENT | Groupon, Inc.</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306): Groupon -</p>
+  <p>Brown, Jordan - 2272502(249775)</p>
+  <p>47. GS Global Resources</p>
+  <p>IF Client(177076) is undefined</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>48. Hewlett Packard Enterprise</p>
+  <p>IF Client(177076) is AQUENT | Hewlett Packard Enterprise</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>49. Hewlett Packard Enterprise (Managed Services)</p>
+  <p>IF Client(177076) is AQUENT | Hewlett Packard Enterprise (Managed</p>
+  <p>Services)</p>
+  <p>THEN Set Field Value: Billing Frequency(203363): Monthly(196600)</p>
+  <p>AND Set Field Value: Industry(182987): Technology: Online, Software</p>
+  <p>& Cloud(173924)</p>
+  <p>AND Set Field Value: Aquent Group (ITS/Studios/Staffing)(216288):</p>
+  <p>Managed Services</p>
+  <p>AND Set Field Value: Project Time Approver(194799): 73821(73821)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306): HPMS -</p>
+  <p>Martin, Kimberly - 358596(258312)</p>
+  <p>50. HP Inc. (Managed Services)</p>
+  <p>IF Client(177076) is AQUENT | HP Inc. (Managed Services)</p>
+  <p>THEN Set Field Value: Billing Frequency(203363): Monthly(196600)</p>
+
+  <p>AND Set Field Value: Industry(182987): Technology: Devices(173923)</p>
+  <p>AND Set Field Value: Aquent Group (ITS/Studios/Staffing)(216288):</p>
+  <p>Managed Services</p>
+  <p>AND Set Field Value: Project Time Approver(194799): 73821(73821)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306): HPMS -</p>
+  <p>Martin, Kimberly - 358596(258312)</p>
+  <p>51. Hines Interests Limited Partnerships</p>
+  <p>IF Client(177076) is undefined</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>52. HMR Weight Management Services Corp</p>
+  <p>IF Client(177076) is undefined</p>
+  <p>THEN Show Sections: HMR(175752)</p>
+  <p>AND Hide Fields: Tier(219803),Client Contact(182993),Client Contact</p>
+  <p>Email(182994)</p>
+  <p>AND Set Field Value: Revenue(177087): 0</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>53. HP Inc.</p>
+  <p>IF Client(177076) is AQUENT | HP Inc.</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>54. HPI CDD</p>
+  <p>IF Client(177076) is AQUENT | HPI CDD</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>55. HPI KM</p>
+  <p>IF Client(177076) is AQUENT | HPI KM</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+
+  <p>56. Humana Inc.</p>
+  <p>IF Client(177076) is AQUENT | Humana Inc.</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>AND Show Sections: Humana(223186)</p>
+  <p>AND Show Fields: 216962 | Program(266997),216962 |</p>
+  <p>Category(268596)</p>
+  <p>57. Intellectual Property Owners Association</p>
+  <p>IF Client(177076) is AQUENT | Intellectual Property Owners</p>
+  <p>Association</p>
+  <p>THEN Show Sections: Intellectual Property Owners</p>
+  <p>Association(191162)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>58. Johnson & Johnson</p>
+  <p>IF Client(177076) is AQUENT | Johnson & Johnson</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>59. JP Morgan Chase Bank, National Association</p>
+  <p>IF Client(177076) is undefined</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>60. Kaiser Permanente</p>
+  <p>IF Client(177076) is AQUENT | Kaiser Permanente</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306): Kaiser</p>
+  <p>Permanente - Poulos, Kathleen - 2854096(271886)</p>
+  <p>61. Kelly Services @ Deer (ITS)</p>
+  <p>IF Client(177076) is AQUENT | Kelly Services @ Deere (ITS)</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>62. Lockheed Martin Corporation</p>
+  <p>IF Client(177076) is AQUENT | Lockheed Martin Corporation</p>
+  <p>THEN Show Sections: Lockheed Martin Corporation(216590)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306): Lockheed</p>
+  <p>Martin - Thurman, Ray - 1663208(247915)</p>
+  <p>63. Liberty Mutual Insurance Company</p>
+  <p>IF Client(177076) is AQUENT | Liberty Mutual Insurance Company</p>
+  <p>THEN Set Field Options: Staffing Account Director(250306): Liberty</p>
+  <p>Mutual - Doherty(267079), William - 2798895( 247922)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306): Liberty</p>
+  <p>Mutual - Doherty, William - 2798895(267079)</p>
+  <p>64. Marriott International Global Digital</p>
+  <p>IF Client(177076) is AQUENT | Marriott International Global Digital</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>65. Marriott International MDS</p>
+  <p>IF Client(177076) is AQUENT | Marriott International MDS</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>66. Marriott International MDS OT</p>
+  <p>IF Client(177076) is AQUENT | zzz[09/06/2021] Marriott International</p>
+  <p>MDS OT</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>67. Merck & Company, Inc.</p>
+  <p>IF Client(177076) is AQUENT | Merck & Company, Inc.</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>68. MetLife Inc.</p>
+  <p>IF Client(177076) is AQUENT | MetLife Inc.</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>69. Micro Focus (Managed Staffing)</p>
+  <p>IF Client(177076) is AQUENT | Micro Focus (Managed Services)</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>70. Mozilla</p>
+  <p>IF Client(177076) is AQUENT | Mozilla</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>71. McDonald's Corporation</p>
+  <p>IF Client(177076) is AQUENT | McDonald's Corporation</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>72. Microfocus (Managed Services)</p>
+  <p>IF Client(177076) is AQUENT | Micro Focus (Managed Services)</p>
+  <p>THEN Set Field Value: Billing Frequency(203363): Monthly(196600)</p>
+  <p>AND Set Field Value: Project Status(177081): Start Pending(261120)</p>
+  <p>AND Set Field Value: Industry(182987): Technology: Devices(173923)</p>
+  <p>AND Set Field Value: Aquent Group (ITS/Studios/Staffing)(216288):</p>
+  <p>Managed Services</p>
+  <p>AND Set Field Value: Project Time Approver(194799): 73821(73821)</p>
+  <p>AND Set Field Options: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>73. MetLife</p>
+  <p>IF Client(177076) is AQUENT | MetLife Inc.</p>
+  <p>THEN Show Sections: MetLife(179119)</p>
+  <p>AND Set Field Value: Industry(182987): Financial: Insurance(173908)</p>
+  <p>74. Microsoft Canada Studios</p>
+  <p>IF Client(177076) is AQUENT | Microsoft Canada Studios</p>
+  <p>THEN Show Sections: Microsoft(191159)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>AND Set Field Value: Billing Type(194797): Fee Based Billing(107)</p>
+  <p>75. Microsoft Cloud + AI Fee</p>
+  <p>IF Client(177076) is AQUENT | Microsoft Cloud + AI Fee</p>
+  <p>THEN Show Sections: Microsoft(191159)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>76. Microsoft Cloud + AI T&amp;M</p>
+  <p>IF Client(177076) is undefined</p>
+  <p>THEN Show Sections: Microsoft(191159)</p>
+  <p>77. Microsoft DevRelations C+L Managed Service</p>
+  <p>IF Client(177076) is AQUENT | Microsoft DevRelations C+L Managed</p>
+  <p>Service</p>
+  <p>THEN Show Sections: Microsoft(191159)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>78. Microsoft Exp+D Content</p>
+  <p>IF Client(177076) is AQUENT | Microsoft Exp+D Content</p>
+  <p>THEN Show Sections: Microsoft(191159)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>79. Microsoft Gaming</p>
+  <p>IF Client(177076) is AQUENT | Microsoft Gaming</p>
+  <p>THEN Show Sections: Microsoft(191159)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>80. Microsoft Marketing & Consumer Business Management</p>
+  <p>IF Client(177076) is AQUENT | Microsoft Gaming</p>
+  <p>THEN Show Sections: Microsoft(191159)</p>
+  <p>81. Microsoft ML&amp;D Creative Studio</p>
+  <p>IF Client(177076) is AQUENT | Microsoft ML&amp;D Creative Studio</p>
+  <p>THEN Show Sections: Microsoft(191159)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>82. Microsoft MSN</p>
+  <p>IF Client(177076) is AQUENT | zzz[07/05/2021] Microsoft MSN</p>
+  <p>THEN Show Sections: Microsoft(191159)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>83. Microsoft Turn 10</p>
+  <p>IF Client(177076) is AQUENT | Microsoft Turn 10</p>
+  <p>THEN Show Sections: Microsoft(191159)</p>
+  <p>84. Microsoft WCB</p>
+  <p>IF Client(177076) is AQUENT | Microsoft WCB</p>
+  <p>THEN Show Sections: Microsoft(191159)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>85. Mphasis @ HP Inc.</p>
+  <p>IF Client(177076) is AQUENT | Mphasis @ HP Inc.</p>
+  <p>THEN Set Field Options: Staffing Account Director(250306): Mphasis -</p>
+  <p>Martin(269022), Kimberly - 358596( 247922)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306): Mphasis -</p>
+  <p>Martin, Kimberly - 358596(269022)</p>
+  <p>86. National Renewable Energy Lab</p>
+  <p>IF Client(177076) is undefined</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>87. Nike, Inc.</p>
+  <p>IF Client(177076) is undefined</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>88. ODVA Inc.</p>
+  <p>IF Client(177076) is AQUENT | ODVA Inc.</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>89. Oracle Corporation</p>
+  <p>IF Client(177076) is AQUENT | Oracle Corporation</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>90. PBF Energy</p>
+  <p>IF Client(177076) is AQUENT | PBF Energy</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>91. Peace Corps</p>
+  <p>IF Client(177076) is AQUENT | Peace Corps</p>
+  <p>THEN Set Field Options: Staffing Account Director(250306): Peace</p>
+  <p>Corps - Ray Thurman - 1663208(247922),Unassigned( 263245)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306): Peace Corps</p>
+  <p>- Ray Thurman - 1663208(263245)</p>
+  <p>92. Pekin Insurance Company (ITS)</p>
+  <p>IF Client(177076) is AQUENT | Pekin Insurance Company (ITS)</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>93. Pennzoil-Quaker State Company</p>
+  <p>IF Client(177076) is AQUENT | Pennzoil-Quaker State Company</p>
+  <p>THEN Set Field Options: Staffing Account Director(250306): Pennzoil -</p>
+  <p>Huynh(262016), Leila - 2848643( 247922)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306): Pennzoil -</p>
+  <p>Huynh, Leila - 2848643(262016)</p>
+  <p>94. Pitney Bowes Inc.</p>
+  <p>IF Client(177076) is undefined</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>95. Rakuten USA, Inc.</p>
+  <p>IF Client(177076) is AQUENT | Rakuten USA, Inc.</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>96. Raytheon Company</p>
+  <p>IF Client(177076) is AQUENT | Raytheon Company</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>97. Salesforce.com</p>
+  <p>IF Client(177076) is AQUENT | Salesforce.com</p>
+  <p>THEN Set Field Options: Staffing Account Director(250306): Salesforce</p>
+  <p>- Cox(261013), Caroline - 2855226(247922)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>98. Sephora</p>
+  <p>IF Client(177076) is AQUENT | zzz[11/01/2021] Sephora</p>
+  <p>THEN Set Field Value: Industry(182987): Etail / Retail(173905)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306): Sephora -</p>
+  <p>Howard, Kimberly - 1970029(247919)</p>
+  <p>99. Shutterfly BorrowLenses</p>
+  <p>IF Client(177076) is undefined</p>
+
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>100. Shutterfly Inc.</p>
+  <p>IF Client(177076) is AQUENT | Shutterfly Inc.</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>101. Solo</p>
+  <p>IF Client(177076) is undefined</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>102. Synchrony Financial</p>
+  <p>IF Client(177076) is AQUENT | Synchrony Financial</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>103. Texas Instruments Incorporated</p>
+  <p>IF Client(177076) is undefined</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306): Texas</p>
+  <p>Instruments - Tiefenthaler, Jessica - 2511455(247921)</p>
+  <p>104. Thurgood Marshall College Fund</p>
+  <p>IF Client(177076) is undefined</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>105. Tradesmen International</p>
+  <p>IF Client(177076) is AQUENT | Tradesmen International</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>106. VMware</p>
+  <p>IF Client(177076) is AQUENT | VMware</p>
+  <p>THEN Show Sections: VMware(167242)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>107. Walmart, Inc.</p>
+  <p>IF Client(177076) is AQUENT | Walmart Inc.</p>
+  <p>THEN Set Field Options: Staffing Account Director(250306): Walmart -</p>
+  <p>Stevenson(264139), Sam - 2487746( 247922)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306): Walmart -</p>
+  <p>Stevenson, Sam - 2487746(264139)</p>
+  <p>108. Westfield Corporate Marketing</p>
+  <p>IF Client(177076) is AQUENT | Unibail-Rodamco-Westfield Corporate</p>
+  <p>Marketing</p>
+  <p>THEN Show Fields: 213712 | Deliverable(204192)</p>
+  <p>AND Set Field Value: Industry(182987): Etail / Retail(173905)</p>
+  <p>AND Hide Fields: Client Division/Department(183065)</p>
+  <p>AND Show Sections: URW(158224)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>109. Westfield Other Divisions</p>
+  <p>IF Client(177076) is AQUENT | Unibail-Rodamco-Westfield Other</p>
+  <p>Divisions</p>
+  <p>THEN Show Sections: URW(158224)</p>
+  <p>AND Show Fields: 213712 | Deliverable(204192)</p>
+  <p>AND Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>110. Worldcom Exchange, Inc.</p>
+  <p>IF Client(177076) is undefined</p>
+  <p>THEN Set Field Value: Staffing Account Director(250306):</p>
+  <p>Unassigned(247922)</p>
+  <p>111. Dev6 | Audi of America</p>
+  <p>IF Client(177076) is undefined</p>
+
+  <p>THEN Set Field Value: Staffing Account Director(250306): (null)</p>
+  <p>112. Deliverable Type | Admin Confidential</p>
+  <p>IF Deliverable Type_acct(241941) is Confidential</p>
+  <p>AND Client(177076) is not AQUENT | COBRA</p>
+  <p>THEN Show Message: This deliverable type can not be used without</p>
+  <p>express permission. Please click OK, re-open the project and select a</p>
+  <p>different deliverable type. Contact StudiosAdmins@aquent.com should</p>
+  <p>you have any questions.</p>
+  <p>DISPLAY: Every time the form is modified</p>
+  <p>113. Deliverable Type | Options</p>
+  <p>IF User Role(176836) is not Account Admin</p>
+  <p>THEN Set Field Options: Deliverable Type_acct(241941): Content</p>
+  <p>(voice)(230225),Digital( 230226),Digital (DEV only)( 230227),Digital</p>
+  <p>(FED only)( 230228),Managed Services( 230229),Marketing(</p>
+  <p>230230),Photography( 230231),Presentation( 230232),Print(</p>
+  <p>230233),Video( 260746)</p>
+  <p>114. Deliverable Subtype | Content (voice)</p>
+  <p>IF Deliverable Type_acct(241941) is Content (voice)</p>
+  <p>THEN Set Field Options: Deliverable Subtype_acct(259053): Copy</p>
+  <p>Editing(259951),Instructional Design( 259956),Marketing Writing(</p>
+  <p>259961),Proposal Writing( 259964),Social Media( 259965),Speech</p>
+  <p>Writing( 259966),Technical Writing( 259969)</p>
+  <p>115. Deliverable Subtype | Digital</p>
+  <p>IF Deliverable Type_acct(241941) is Digital</p>
+  <p>THEN Set Field Options: Deliverable Subtype_acct(259053): Animated</p>
+  <p>Banner(259946),Animated Digital Panel( 259947),App Development(</p>
+  <p>259948),CGI (3D Illustration)( 259949),Dynamic Page (dashboard)(</p>
+  <p>259952),eBook( 259953),eLearning( 259954),Email(</p>
+  <p>259955),Interactive Digital Panel( 259957),Interactive Kiosk(</p>
+  <p>259958),iPad( 259959),Landing Page( 259960),Microsite(</p>
+  <p>259962),Mobile Messaging( 259963),Social Media( 259965),Static AD</p>
+  <p>Banner( 259967),Static Digital Panel( 259968),User Experience /</p>
+  <p>Engagement( 259970),Virtual Reality( 259971),Website( 259972)</p>
+  <p>116. Deliverable Subtype | Digital (DEV only)</p>
+  <p>IF Deliverable Type_acct(241941) is Digital (DEV only)</p>
+
+  <p>THEN Set Field Options: Deliverable Subtype_acct(259053): Animated</p>
+  <p>Banner(259946),Animated Digital Panel( 259947),App Development(</p>
+  <p>259948),Content Migration( 260001),Dynamic Page (dashboard)(</p>
+  <p>259952),eBook( 259953),eLearning( 259954),Email(</p>
+  <p>259955),Interactive Digital Panel( 259957),Interactive Kiosk(</p>
+  <p>259958),iPad( 259959),Landing Page( 259960),Microsite(</p>
+  <p>259962),Social Media( 259965),User Experience / Engagement(</p>
+  <p>259970),Virtual Reality( 259971),Website( 259972)</p>
+  <p>117. Deliverable Subtype | Digital (FED only)</p>
+  <p>IF Deliverable Type_acct(241941) is Digital (FED only)</p>
+  <p>THEN Set Field Options: Deliverable Subtype_acct(259053): 360</p>
+  <p>Video(259991),Animated Banner( 259946),Animated Digital Panel(</p>
+  <p>259947),App Development( 259948),Dynamic Page (dashboard)(</p>
+  <p>259952),eBook( 259954),eLearning( 259953),Email(</p>
+  <p>259955),Interactive Digital Panel( 259957),Interactive Kiosk(</p>
+  <p>259958),iPad( 259959),Landing Page( 259960),Microsite(</p>
+  <p>259962),Social Media( 259965),User Experience / Engagement(</p>
+  <p>259970),Virtual Reality( 259971),Website( 259972)</p>
+  <p>118. Deliverable Subtype | Marketing</p>
+  <p>IF Deliverable Type_acct(241941) is Marketing</p>
+  <p>THEN Set Field Options: Deliverable Subtype_acct(259053): Brand</p>
+  <p>Management(259995),Communication Management( 259999),Content</p>
+  <p>Management( 260000),Demand Gen( 260002),Event Execution(</p>
+  <p>260005),Event Management( 260006),Image Management(</p>
+  <p>260009),Market Research / Analytics( 260013),Marketing</p>
+  <p>Coordination( 260014),Product Management( 260023),Training(</p>
+  <p>260027)</p>
+  <p>119. Deliverable Subtype | Managed Services</p>
+  <p>IF Deliverable Type_acct(241941) is Managed Services</p>
+  <p>THEN Set Field Options: Deliverable Subtype_acct(259053): CRE - Art</p>
+  <p>or Creative Director(260747),CRE - Editor or Proofreader(</p>
+  <p>260748),CRE - Fashion Designer( 260749),CRE - Film and Video</p>
+  <p>Editor( 260750),CRE - Graphic Designer( 260751),CRE - Illustrator(</p>
+  <p>260752),CRE - Industrial Designer( 260753),CRE - Interior Designer(</p>
+  <p>260754),CRE - Merchandise Displayer or Coordinator( 260755),CRE -</p>
+  <p>Package Designer( 260756),CRE - Photographer( 260758),CRE -</p>
+  <p>Presentation Designer( 260757),CRE - Production Artist( 260759),CRE</p>
+  <p>- Public Relations Specialist( 260760),CRE - Social Media Specialist(</p>
+  <p>260761),CRE - Special Effects Artist or Animator( 260762),CRE -</p>
+  <p>Technical Writer( 260763),CRE - Unqualified( 260764),CRE - Web or</p>
+  <p>Digital Designer( 260765),CRE - Writer( 260766),MAR - Account</p>
+  <p>Manager( 260767),MAR - Administrative Support( 260768),MAR -</p>
+  <p>Digital Marketing Specialist( 260769),MAR - Internal Communications(</p>
+
+  <p>260770),MAR - Marketing Data Analyst( 260771),MAR - Market</p>
+  <p>Research Analyst( 260772),MAR - Meeting( 260773), Convention(</p>
+  <p>260774), or Event Planner( 260775),MAR - Other Marketing</p>
+  <p>Specialist( 260777),MAR - Product Manager( 260776),MAR - Project</p>
+  <p>Manager( 260778),MAR - Training and Development Specialist(</p>
+  <p>260779),TECH - Computer Support Specialist( 260780),TECH -</p>
+  <p>Computer Systems Engineer/Architect( 260781),TECH - Data Scientist(</p>
+  <p>260782),TECH - Information Architect( 260783),TECH - Marketing</p>
+  <p>Technology Management( 260784),TECH - Non Marketing Data</p>
+  <p>Analyst( 260785),TECH - Product Designer( 260786),TECH - Service</p>
+  <p>Designer/CX( 260787),TECH - Software Developer( 260788),TECH -</p>
+  <p>Software Quality Assurance Analyst or Tester( 260789),TECH - User</p>
+  <p>Researcher( 260790)</p>
+  <p>120. Deliverable Subtype | Photography</p>
+  <p>IF Deliverable Type_acct(241941) is Photography</p>
+  <p>THEN Set Field Options: Deliverable Subtype_acct(259053):</p>
+  <p>Event(260004),Location( 260012),Portrait / Passport(</p>
+  <p>260018),Product( 260022),Retouching( 260024)</p>
+  <p>121. Deliverable Subtype | Presentation</p>
+  <p>IF Deliverable Type_acct(241941) is Presentation</p>
+  <p>THEN Set Field Options: Deliverable Subtype_acct(259053):</p>
+  <p>Acrobat(259992),Keynote( 260011),Powerpoint( 260020)</p>
+  <p>122. Deliverable Subtype | Print</p>
+  <p>IF Deliverable Type_acct(241941) is Print</p>
+  <p>THEN Set Field Options: Deliverable Subtype_acct(259053):</p>
+  <p>Advertising / AD(259993),Brochure( 259996),Catalog(</p>
+  <p>259997),Collateral( 259998),Direct Mail( 260003),Exhibit(</p>
+  <p>260007),Floor / Window Graphic( 260008),Infographic(</p>
+  <p>260010),Packaging( 260016),Poster( 260019),Premium / Swag(</p>
+  <p>260021),Signage( 260025),Template / Self-service( 260026)</p>
+  <p>123. Deliverable Subtype | Video</p>
+  <p>IF Deliverable Type_acct(241941) is Video</p>
+  <p>THEN Set Field Options: Deliverable Subtype_acct(259053): 360</p>
+  <p>Video(259991),Audio Production( 259994),Motion Graphics(</p>
+  <p>260015),Podcast( 260017),Video Production / Editing(</p>
+  <p>260028),Videography( 260029),Webcast( 260030)</p>
+  <p>124. Deliverable Subtype | zzADMIN ONLY_NB</p>
+  <p>IF Deliverable Type_acct(241941) is zzADMIN ONLY_NB</p>
+  <p>THEN Set Field Options: Deliverable Subtype_acct(259053):</p>
+  <p>zzADMIN ONLY_NB(260031)</p>
+  <p>AND Set Field Value: Deliverable Subtype_acct(259053): zzADMIN</p>
+  <p>ONLY_NB(260031)</p>
+  <p>125. TEST Client</p>
+  <p>IF Client(177076) is AQUENT | zzzTest Client</p>
+  <p>THEN Show Sections: Aetna(151091)</p>
+
+</body>
+</html>

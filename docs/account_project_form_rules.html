@@ -90,6 +90,16 @@ background-color: rgb(4, 131, 0);
   font-weight: bold;
   color: #ff9900;
 }
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  background-color: #333;
+  border-radius: 15px;
+  text-shadow: 2px 2px 2px white;
+  text-rendering:optimizeLegibility;
+  color: #1e1e1e;
+}
     </style>
     <title>RoboHead Project Form Rules - Account Level</title>
   </head>
@@ -102,7 +112,7 @@ background-color: rgb(4, 131, 0);
     <div class="container">
       <div class="col">
         <div class="row" id="sec1">
-          <h1 id="admin" style="text-align: center;">Account Level Form Rules</h1>
+          <h1 id="admin">Account Level Form Rules</h1>
           <dl>
             <dt>ADMIN | Billing Type - Fee Based Billing</dt>
             <dd><span id="bIF">IF</span> Billing Type is Fee Based Billing</dd>
@@ -162,14 +172,6 @@ background-color: rgb(4, 131, 0);
             <dt>AIG Inc.</dt>
             <dd><span id="bIF">IF</span> Client is AQUENT | American International Group, Inc.</dd>
             <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: AIG Inc. - Grannell, Blake - 2267889</dd>
-
-            <dt>Amazon</dt>
-            <dd><span id="bIF">IF</span> Client is AQUENT | Amazon</dd>
-            <dd><span id="bID">THEN</span> Set Field Value: Industry: Etail / Retail</dd>
-            <dd><span id="bAN">AND</span> Hide Fields: Aquent Account Manager, Aquent Project Manager, Client Contact Email, Taxable, Tier, Project Documents, Country</dd>
-            <dd><span id="bAN">AND</span> Set Field Value: Billing Frequency: Monthly</dd>
-            <dd><span id="bAN">AND</span> Show Sections:</dd>
-            <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
 
             <dt>Anthem</dt>
             <dd><span id="bIF">IF</span> Client is AQUENT | Anthem, Inc.</dd>
@@ -502,12 +504,6 @@ background-color: rgb(4, 131, 0);
               <dd><span id="bAN">AND</span> Show Sections:Humana</dd>
               <dd><span id="bAN">AND</span> Show Fields: 216962 | Program,216962 | Category</dd>
 
-
-            <dt>ICMA-RC</dt>
-              <dd><span id="bIF">IF</span> Client is AQUENT | ICMA-RC</dd>
-              <dd><span id="bID">THEN</span> Set Field Options: Staffing Account Director: ICMA- RC - Moore, Sarah Tyler - 2658703( 247922)</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: ICMA-RC - Moore, Sarah Tyler - 2658703</dd>
-
             <dt>Intellectual Property Owners Association</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | Intellectual Property Owners Association</dd>
               <dd><span id="bID">THEN</span> Show Sections: Intellectual Property Owners Association</dd>
@@ -668,10 +664,6 @@ background-color: rgb(4, 131, 0);
               <dd><span id="bIF">IF</span> Client is AQUENT | Oracle Corporation</dd>
               <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
 
-            <dt>Pandora Media</dt>
-              <dd><span id="bIF">IF</span> Client is AQUENT | Pandora Media, LLC</dd>
-              <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Pandora - Salazar, Melissa - 2451572</dd>
-
             <dt>PBF Energy</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | PBF Energy</dd>
               <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
@@ -701,25 +693,6 @@ background-color: rgb(4, 131, 0);
             <dt>Raytheon Company</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | Raytheon Company</dd>
               <dd><span id="bID">THEN</span> Set Field Value: Staffing Account Director: Unassigned</dd>
-
-            <dt>Rockwell Automation - No Tax</dt>
-              <dd><span id="bIF">IF</span> Client is AQUENT | Rockwell Automation - No tax</dd>
-              <dd><span id="bID">THEN</span> Show Sections: Rockwell</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
-              <dd><span id="bAN">AND</span> Hide Fields: Client Contact, ClientContact Email, Client Division/Department</dd>
-              <dd><span id="bAN">AND</span> Show Fields: Actual Final Delivery Date</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
-
-            <dt>Rockwell Automation - Tax</dt>
-              <dd><span id="bIF">IF</span> Client is AQUENT | Rockwell Automation - Tax</dd>
-              <dd><span id="bID">THEN</span> Show Sections: Rockwell</dd>
-              <dd><span id="bAN">AND</span> Show Fields: Tax Code,Tax %,Tax Type,Actual Final Delivery Date</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Tax %: 8</dd>
-              <dd><span id="bAN">AND</span> Set Field Options: Tax Type: Tax based on delivery location</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Taxable: Yes</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Industry: Manufacturing</dd>
-              <dd><span id="bAN">AND</span> Hide Fields: Client Contact Email,Client Contact,Client Division/Department</dd>
-              <dd><span id="bAN">AND</span> Set Field Value: Staffing Account Director: Unassigned</dd>
 
             <dt>Salesforce.com</dt>
               <dd><span id="bIF">IF</span> Client is AQUENT | Salesforce.com</dd>
