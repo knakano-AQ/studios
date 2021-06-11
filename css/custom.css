@@ -11,3 +11,8 @@ body {
 .container {
   background-color: whitesmoke;
 }
+
+iframe {
+  height: 400px;
+  width: auto;
+}
