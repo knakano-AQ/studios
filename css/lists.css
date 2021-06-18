@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  background-color: #1e1e1e;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.col {
+  padding: 4rem;
+  z-index: 1;
+}
+
+#colNav {
+  width: 50px;
+  background-color: transparent;
+}
+
+.row-fluid {
+  background-image: url("../assets/background.png");
+}
+
+li {
+  color: #d6d6d6;
+  letter-spacing: 2px;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 2rem;
+  padding-bottom: 10px;
+  counter-increment: inherit;
+}
+
+/* dd::before {
+  counter-increment: section;
+  content: counters(section,".") " ";
+} */
+
+dd {
+  color: #858585;
+  line-height: 2;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  }
+
+dt {
+  float: left;
+  }
+
+dt a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+dt a:hover:not(.active) {
+background-color: rgb(4, 131, 0);
+}
+
+#bIF {
+  font-weight: bolder;
+  color: #ff9900;
+}
+
+#bID {
+  font-weight: bold;
+  color: #ff9900;
+}
+
+#bAN {
+  font-weight: bold;
+  color: #ff9900;
+}
+
+#bDI {
+  font-weight: bold;
+  color: #ff9900;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  background-color: #333;
+  border-radius: 15px;
+  text-shadow: 2px 2px 2px white;
+  text-rendering:optimizeLegibility;
+  color: #1e1e1e;
+}
+
+/* #myUL {
+
+} */
+
+.caret {
+  cursor: grab;
+  user-select: none; /* Prevent text selection */
+}
+
+.caret::before {
+  content: "\25B6";
+  color: #ff9900;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  transform: rotate(90deg);
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
